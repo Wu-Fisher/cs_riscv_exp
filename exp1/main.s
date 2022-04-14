@@ -29,7 +29,7 @@ muti:
 	.section	.rodata.str1.8,"aMS",@progbits,1
 	.align	3
 .LC0:
-	.string	"num:%d,cubed:%d"
+	.string	"num:%d,cubed:%d\n"
 	.section	.text.startup,"ax",@progbits
 	.align	1
 	.globl	main
