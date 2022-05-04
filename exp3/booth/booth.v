@@ -11,7 +11,6 @@ module booth (
 reg  [31:0] A;
 reg    [31:0] B;
 reg[4:0] cnt;
-//reg[31:0] C;
 integer C=32'h8000_0000;
 
 
@@ -22,9 +21,16 @@ assign busy=mb;
 
 
 always @(posedge clk or negedge rst_n) begin
-	if(start==1'b1)
+	
+	if(!rst_n)
 	begin
-//	    C<=32'h8000_0000;
+		cnt<=5'h0;
+		A<=0;
+		B<=0;
+		mb<=0;
+	end
+	else if(start==1'b1)
+	begin
 		mb <=1'b1;
 		A[31:16] <= x;
 		A[15:0]<=16'b0;
