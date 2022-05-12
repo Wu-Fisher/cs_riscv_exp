@@ -1,0 +1,309 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module testbench.g0.trace.inst.native_mem_module.blk_mem_gen_v8_4_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Block Memory Generator module testbench.g0.cache0.u_cache.inst.native_mem_module.blk_mem_gen_v8_4_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module testbench.g0.mem0.u_mem.inst.native_mem_module.blk_mem_gen_v8_4_2_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
+访问地址为   0
+等待Cache响应，应得到数据 26
+等待Cache响应，应得到数据 26
+等待Cache响应，应得到数据 26
+等待Cache响应，应得到数据 26
+等待Cache响应，应得到数据 26
+等待Cache响应，应得到数据 26
+等待Cache响应，应得到数据 26
+等待Cache响应，应得到数据 26
+等待Cache响应，应得到数据 26
+等待Cache响应，应得到数据 26
+等待Cache响应，应得到数据 26
+等待Cache响应，应得到数据 26
+等待Cache响应，应得到数据 26
+等待Cache响应，应得到数据 26
+等待Cache响应，应得到数据 26
+等待Cache响应，应得到数据 26
+等待Cache响应，应得到数据 26
+等待Cache响应，应得到数据 26
+等待Cache响应，应得到数据 26
+Cache读命中!
+Cache已取回数据 26
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为   1
+等待Cache响应，应得到数据 11
+Cache读命中!
+Cache已取回数据 11
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为   2
+等待Cache响应，应得到数据 12
+Cache读命中!
+Cache已取回数据 12
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为   3
+等待Cache响应，应得到数据 14
+Cache读命中!
+Cache已取回数据 14
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为   4
+等待Cache响应，应得到数据128
+等待Cache响应，应得到数据128
+等待Cache响应，应得到数据128
+等待Cache响应，应得到数据128
+等待Cache响应，应得到数据128
+等待Cache响应，应得到数据128
+等待Cache响应，应得到数据128
+等待Cache响应，应得到数据128
+等待Cache响应，应得到数据128
+等待Cache响应，应得到数据128
+等待Cache响应，应得到数据128
+等待Cache响应，应得到数据128
+等待Cache响应，应得到数据128
+等待Cache响应，应得到数据128
+等待Cache响应，应得到数据128
+等待Cache响应，应得到数据128
+等待Cache响应，应得到数据128
+等待Cache响应，应得到数据128
+等待Cache响应，应得到数据128
+Cache读命中!
+Cache已取回数据128
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为   5
+等待Cache响应，应得到数据255
+Cache读命中!
+Cache已取回数据255
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为   6
+等待Cache响应，应得到数据 33
+Cache读命中!
+Cache已取回数据 33
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为   7
+等待Cache响应，应得到数据 44
+Cache读命中!
+Cache已取回数据 44
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为   8
+等待Cache响应，应得到数据253
+等待Cache响应，应得到数据253
+等待Cache响应，应得到数据253
+等待Cache响应，应得到数据253
+等待Cache响应，应得到数据253
+等待Cache响应，应得到数据253
+等待Cache响应，应得到数据253
+等待Cache响应，应得到数据253
+等待Cache响应，应得到数据253
+等待Cache响应，应得到数据253
+等待Cache响应，应得到数据253
+等待Cache响应，应得到数据253
+等待Cache响应，应得到数据253
+等待Cache响应，应得到数据253
+等待Cache响应，应得到数据253
+等待Cache响应，应得到数据253
+等待Cache响应，应得到数据253
+等待Cache响应，应得到数据253
+等待Cache响应，应得到数据253
+Cache读命中!
+Cache已取回数据253
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为   9
+等待Cache响应，应得到数据 58
+Cache读命中!
+Cache已取回数据 58
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  10
+等待Cache响应，应得到数据 28
+Cache读命中!
+Cache已取回数据 28
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  11
+等待Cache响应，应得到数据 10
+Cache读命中!
+Cache已取回数据 10
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  12
+等待Cache响应，应得到数据 40
+等待Cache响应，应得到数据 40
+等待Cache响应，应得到数据 40
+等待Cache响应，应得到数据 40
+等待Cache响应，应得到数据 40
+等待Cache响应，应得到数据 40
+等待Cache响应，应得到数据 40
+等待Cache响应，应得到数据 40
+等待Cache响应，应得到数据 40
+等待Cache响应，应得到数据 40
+等待Cache响应，应得到数据 40
+等待Cache响应，应得到数据 40
+等待Cache响应，应得到数据 40
+等待Cache响应，应得到数据 40
+等待Cache响应，应得到数据 40
+等待Cache响应，应得到数据 40
+等待Cache响应，应得到数据 40
+等待Cache响应，应得到数据 40
+等待Cache响应，应得到数据 40
+Cache读命中!
+Cache已取回数据 40
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  13
+等待Cache响应，应得到数据 90
+Cache读命中!
+Cache已取回数据 90
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  14
+等待Cache响应，应得到数据 98
+Cache读命中!
+Cache已取回数据 98
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  15
+等待Cache响应，应得到数据 49
+Cache读命中!
+Cache已取回数据 49
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  16
+等待Cache响应，应得到数据  1
+等待Cache响应，应得到数据  1
+等待Cache响应，应得到数据  1
+等待Cache响应，应得到数据  1
+等待Cache响应，应得到数据  1
+等待Cache响应，应得到数据  1
+等待Cache响应，应得到数据  1
+等待Cache响应，应得到数据  1
+等待Cache响应，应得到数据  1
+等待Cache响应，应得到数据  1
+等待Cache响应，应得到数据  1
+等待Cache响应，应得到数据  1
+等待Cache响应，应得到数据  1
+等待Cache响应，应得到数据  1
+等待Cache响应，应得到数据  1
+等待Cache响应，应得到数据  1
+等待Cache响应，应得到数据  1
+等待Cache响应，应得到数据  1
+等待Cache响应，应得到数据  1
+Cache读命中!
+Cache已取回数据  1
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  17
+等待Cache响应，应得到数据  2
+Cache读命中!
+Cache已取回数据  2
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  18
+等待Cache响应，应得到数据  3
+Cache读命中!
+Cache已取回数据  3
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  19
+等待Cache响应，应得到数据  4
+Cache读命中!
+Cache已取回数据  4
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  20
+等待Cache响应，应得到数据  5
+等待Cache响应，应得到数据  5
+等待Cache响应，应得到数据  5
+等待Cache响应，应得到数据  5
+等待Cache响应，应得到数据  5
+等待Cache响应，应得到数据  5
+等待Cache响应，应得到数据  5
+等待Cache响应，应得到数据  5
+等待Cache响应，应得到数据  5
+等待Cache响应，应得到数据  5
+等待Cache响应，应得到数据  5
+等待Cache响应，应得到数据  5
+等待Cache响应，应得到数据  5
+等待Cache响应，应得到数据  5
+等待Cache响应，应得到数据  5
+等待Cache响应，应得到数据  5
+等待Cache响应，应得到数据  5
+等待Cache响应，应得到数据  5
+等待Cache响应，应得到数据  5
+Cache读命中!
+Cache已取回数据  5
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  21
+等待Cache响应，应得到数据  6
+Cache读命中!
+Cache已取回数据  6
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  22
+等待Cache响应，应得到数据  7
+Cache读命中!
+Cache已取回数据  7
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  23
+等待Cache响应，应得到数据  8
+Cache读命中!
+Cache已取回数据  8
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  24
+等待Cache响应，应得到数据  9
+等待Cache响应，应得到数据  9
+等待Cache响应，应得到数据  9
+等待Cache响应，应得到数据  9
+等待Cache响应，应得到数据  9
+等待Cache响应，应得到数据  9
+等待Cache响应，应得到数据  9
+等待Cache响应，应得到数据  9
+等待Cache响应，应得到数据  9
+等待Cache响应，应得到数据  9
+等待Cache响应，应得到数据  9
+等待Cache响应，应得到数据  9
+等待Cache响应，应得到数据  9
+等待Cache响应，应得到数据  9
+等待Cache响应，应得到数据  9
+等待Cache响应，应得到数据  9
+等待Cache响应，应得到数据  9
+等待Cache响应，应得到数据  9
+等待Cache响应，应得到数据  9
+Cache读命中!
+Cache已取回数据  9
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  25
+等待Cache响应，应得到数据 10
+Cache读命中!
+Cache已取回数据 10
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  26
+等待Cache响应，应得到数据 11
+Cache读命中!
+Cache已取回数据 11
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  27
+等待Cache响应，应得到数据 12
+Cache读命中!
+Cache已取回数据 12
+该地址测试正确，将测试下一个地址
+ ----------- 
+访问地址为  28
+等待Cache响应，应得到数据 13
+等待Cache响应，应得到数据 13
+等待Cache响应，应得到数据 13
+等待Cache响应，应得到数据 13
+等待Cache响应，应得到数据 13

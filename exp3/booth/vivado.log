@@ -2,21 +2,21 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sat Apr 30 09:27:22 2022
-# Process ID: 20872
+# Start of session at: Sat May  7 21:07:58 2022
+# Process ID: 10844
 # Current directory: H:/hub_repo/cs_riscv_exp/exp3/booth
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24664 H:\hub_repo\cs_riscv_exp\exp3\booth\Booth.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20452 H:\hub_repo\cs_riscv_exp\exp3\booth\Booth.xpr
 # Log file: H:/hub_repo/cs_riscv_exp/exp3/booth/vivado.log
 # Journal file: H:/hub_repo/cs_riscv_exp/exp3/booth\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project H:/hub_repo/cs_riscv_exp/exp3/booth/Booth.xpr
+INFO: [Project 1-313] Project file moved from 'F:/hub_repo/cs_riscv_exp/exp3/booth' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'.
-open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 691.801 ; gain = 63.812
 update_compile_order -fileset sources_1
 launch_simulation
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'H:/hub_repo/cs_riscv_exp/exp3/booth/Booth.sim/sim_1/behav/xsim'
@@ -32,7 +32,9 @@ INFO: [VRFC 10-311] analyzing module booth
 INFO: [VRFC 10-2263] Analyzing Verilog file "H:/hub_repo/cs_riscv_exp/exp3/booth/testbench.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module testbench
 WARNING: [VRFC 10-3380] identifier 'test_cnt2_end' is used before its declaration [H:/hub_repo/cs_riscv_exp/exp3/booth/testbench.v:65]
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [VRFC 10-2263] Analyzing Verilog file "H:/hub_repo/cs_riscv_exp/exp3/booth/Booth.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'H:/hub_repo/cs_riscv_exp/exp3/booth/Booth.sim/sim_1/behav/xsim'
 Vivado Simulator 2018.3
@@ -49,16 +51,7 @@ Compiling module xil_defaultlib.booth
 Compiling module xil_defaultlib.testbench
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot testbench_behav
-
-****** Webtalk v2018.3 (64-bit)
-  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
-  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
-
-source H:/hub_repo/cs_riscv_exp/exp3/booth/Booth.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Sat Apr 30 09:28:37 2022...
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 710.930 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'H:/hub_repo/cs_riscv_exp/exp3/booth/Booth.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
@@ -84,8 +77,8 @@ Test end!
 $finish called at time : 2105 ns : File "H:/hub_repo/cs_riscv_exp/exp3/booth/testbench.v" Line 170
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 3000ns
-launch_simulation: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 750.926 ; gain = 39.996
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 758.691 ; gain = 0.000
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 30 09:29:32 2022...
+INFO: [Common 17-206] Exiting Vivado at Sat May  7 21:15:52 2022...
