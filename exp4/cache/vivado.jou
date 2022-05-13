@@ -2,71 +2,73 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu May 12 21:47:56 2022
-# Process ID: 3532
-# Current directory: H:/hub_repo/cs_riscv_exp/exp4/cache
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2264 H:\hub_repo\cs_riscv_exp\exp4\cache\cache.xpr
-# Log file: H:/hub_repo/cs_riscv_exp/exp4/cache/vivado.log
-# Journal file: H:/hub_repo/cs_riscv_exp/exp4/cache\vivado.jou
+# Start of session at: Fri May 13 09:25:33 2022
+# Process ID: 29000
+# Current directory: C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11704 C:\Users\Wufisher\Desktop\work\cs_riscv_exp\exp4\cache\cache.xpr
+# Log file: C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/vivado.log
+# Journal file: C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project H:/hub_repo/cs_riscv_exp/exp4/cache/cache.xpr
+open_project C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/cache.xpr
 update_compile_order -fileset sources_1
 launch_simulation
-open_wave_config H:/hub_repo/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
+open_wave_config C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
 source testbench.tcl
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
+save_wave_config {C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg}
 close_sim
 launch_simulation
-launch_simulation
-open_wave_config H:/hub_repo/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
+open_wave_config C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
 source testbench.tcl
 close_sim
 launch_simulation
-open_wave_config H:/hub_repo/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
+open_wave_config C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
+source testbench.tcl
+set_property -name {xsim.simulate.runtime} -value {15000000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
+source testbench.tcl
+save_wave_config {C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
 source testbench.tcl
 close_sim
 launch_simulation
-open_wave_config H:/hub_repo/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
+open_wave_config C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
 source testbench.tcl
 close_sim
 launch_simulation
-open_wave_config H:/hub_repo/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
+open_wave_config C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
+source testbench.tcl
+set_property -name {xsim.simulate.runtime} -value {50000000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+open_wave_config C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
 source testbench.tcl
 close_sim
 launch_simulation
-open_wave_config H:/hub_repo/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
+open_wave_config C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
+source testbench.tcl
+save_wave_config {C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
+source testbench.tcl
+save_wave_config {C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
 source testbench.tcl
 close_sim
 launch_simulation
-open_wave_config H:/hub_repo/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
+open_wave_config C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
 source testbench.tcl
+set_property -name {xsim.simulate.runtime} -value {1500000ns} -objects [get_filesets sim_1]
 close_sim
 launch_simulation
-open_wave_config H:/hub_repo/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
-source testbench.tcl
-close_sim
-launch_simulation
-open_wave_config H:/hub_repo/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
-source testbench.tcl
-close_sim
-launch_simulation
-open_wave_config H:/hub_repo/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
-source testbench.tcl
-save_wave_config {H:/hub_repo/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg}
-close_sim
-launch_simulation
-open_wave_config H:/hub_repo/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
-source testbench.tcl
-close_sim
-launch_simulation
-open_wave_config H:/hub_repo/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
-source testbench.tcl
-close_sim
-launch_simulation
-open_wave_config H:/hub_repo/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
+open_wave_config C:/Users/Wufisher/Desktop/work/cs_riscv_exp/exp4/cache/cache.srcs/sim_1/imports/cache/testbench_behav.wcfg
 source testbench.tcl
 close_sim

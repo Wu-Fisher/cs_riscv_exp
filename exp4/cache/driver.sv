@@ -65,6 +65,7 @@ cache cache0 (
     .rvalid_from_mem    (rvalid_mem2cache)
 );
 wire wea =  cache0.wea;
+wire[3:0] mt_cur_state=cache0.current_state;
 mem_wrap mem0 (
     .clk    (clk             ),
     .reset  (reset           ),

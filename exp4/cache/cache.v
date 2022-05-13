@@ -10,8 +10,8 @@ module cache (
     input wire        wreq_from_cpu,    // CPU����д����
     input wire [ 7:0] wdata_from_cpu,   // CPU����д����
     // ���²��ڴ�ģ�������ź�
-    input wire [31:0] rdata_from_mem,   // �ڴ��ȡ������
-    input wire        rvalid_from_mem,  // �ڴ��ȡ���ݿ��ñ�־
+    input wire [31:0] rdata_from_mem,   // �ڴ��ȡ������?
+    input wire        rvalid_from_mem,  // �ڴ��ȡ���ݿ��ñ��?
     // �����CPU���ź�
     output wire [7:0] rdata_to_cpu,     // �����CPU������
     output wire       hit_to_cpu,       // �����CPU�����б�־
@@ -38,10 +38,11 @@ wire [ 1:0] offset         = addr_from_cpu[1:0];         // Cache���ڵ��
 wire        valid_bit      = cache_line[37];       // Cache�е���Чλ
 wire [ 4:0] tag_from_cache = cache_line[36:32];         // Cache�е�Tag
 
-wire hit  = (tag_from_cache == tag_from_cpu)&&valid_bit&&(current_state==TAG_CHECK || current_state==READY);
+//reg rr;
+wire hit  = (tag_from_cache == tag_from_cpu)&&valid_bit&&(current_state==TAG_CHECK);
 wire miss = ((tag_from_cache != tag_from_cpu) | (~valid_bit));
 
-// ����Cache�е��ֽ�ƫ�ƣ���Cache����ѡȡCPU������ֽ�����
+// ����Cache�е��ֽ�ƫ�ƣ���Cache����ѡȡCPU������ֽ�����?
 assign rdata_to_cpu = (offset == 2'b00) ? cache_line[7:0] :
                       (offset == 2'b01) ? cache_line[15:8] :
                       (offset == 2'b10) ? cache_line[23:16] : cache_line[31:24];
@@ -70,7 +71,7 @@ end
 always @(*) begin
     case(current_state)
         READY: begin
-            if (rreq_from_cpu) begin
+            if (rreq_from_cpu || wreq_from_cpu) begin
                 next_state = TAG_CHECK; 
             end else begin
                 next_state = READY;
@@ -96,7 +97,6 @@ always @(*) begin
     endcase
 end
 
-reg rr;
 always@(*)
 begin
     case(current_state)
@@ -161,23 +161,31 @@ always @(posedge clk) begin
         waddr_to_mem <= 0;
         wdata_to_mem<=0;
         mWrite<=0;
-        rr<=0;
+//        rr<=0;
     end else begin
         case(current_state)
         READY:
         begin
         if(wreq_from_cpu)
         begin
-        rr<=1;
+//        rr<=1;
         wreq_to_mem <= 0;
         waddr_to_mem <= 0;
         wdata_to_mem<=0;
         mWrite<=0;
         end
+        else
+        begin
+        mWrite<=0;
+//         rr<=0;
+        wreq_to_mem <= 0;
+        waddr_to_mem <= 0;
+        wdata_to_mem<=0;
+        end
         end
         TAG_CHECK:
         begin
-        if(hit && rr)
+        if(hit && wreq_from_cpu)
         begin
         mWrite<=1;
         wdata_to_mem<=wdata_from_cpu;
@@ -191,7 +199,7 @@ always @(posedge clk) begin
         waddr_to_mem <= 0;
         wdata_to_mem<=0;
         mWrite<=0;
-        rr<=0;
+//        rr<=0;
         end
 
         endcase 
