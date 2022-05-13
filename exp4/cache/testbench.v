@@ -19,7 +19,7 @@ driver g0 (
     .test_success       (test_success   ),
     .test_fail          (test_fail      )
 );
-//wire[12:0] addrmm = g0.raddr_cache2mem;
+
 integer fp_w;
 reg f0;
 initial begin
