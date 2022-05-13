@@ -1,0 +1,70 @@
+<mxfile host="65bd71144e">
+    <diagram id="JEz_Pj7jLH-uwcwm6EJY" name="第 1 页">
+        <mxGraphModel dx="896" dy="601" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;curved=1;" edge="1" parent="1" source="3">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="299.0000000000023" y="338.4999999999999" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="237" y="167"/>
+                            <mxPoint x="237" y="339"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 20px&quot;&gt;READY&lt;/span&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="299" y="108" width="101" height="101" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" style="edgeStyle=orthogonalEdgeStyle;curved=1;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#000000;" edge="1" parent="1" target="3">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="349.5000000000002" y="288" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="350" y="263"/>
+                            <mxPoint x="496" y="263"/>
+                            <mxPoint x="496" y="157"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="" style="curved=1;endArrow=classic;html=1;fontFamily=Helvetica;fontSize=20;fontColor=#000000;strokeColor=#000000;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="3">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="503" y="26" as="sourcePoint"/>
+                        <mxPoint x="483" y="272" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="429" y="52"/>
+                            <mxPoint x="503" y="26"/>
+                            <mxPoint x="315" y="91"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="6" value="RESET" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="326" y="35" width="77" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="写cache操作" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="94" y="80" width="123" height="28" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;span style=&quot;font-size: 15px&quot;&gt;检测写信号&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="155" y="224" width="85" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px&quot;&gt;TAG_CHECK&lt;/font&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="299" y="288" width="101" height="101" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;font style=&quot;font-size: 15px&quot; color=&quot;#000000&quot;&gt;由于不做写丢失操作，&lt;br&gt;无论如何都返回READY&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="497" y="200" width="167" height="34" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="READY：等待数据以及信号输入&lt;br&gt;或者为命中后输出cache地址结果" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="482" y="104" width="303" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="TAG_CHECK：检查是否写命中&lt;br&gt;（tag是否相等）&lt;br&gt;不命中则不操作&lt;br&gt;如果写命中，则往cache和主存相应地址&lt;br&gt;都写入cpu输入数据" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=20;fontFamily=Helvetica;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="452" y="303" width="363" height="124" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="&lt;span style=&quot;background-color: rgb(255 , 255 , 255)&quot;&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px&quot;&gt;FLUSH&lt;/font&gt;&lt;/span&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="28" y="262" width="72" height="72" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Text" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=15;fontColor=#000000;" vertex="1" parent="1">
+                    <mxGeometry x="44" y="347" width="40" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
