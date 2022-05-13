@@ -99,6 +99,12 @@ end
 
 always@(*)
 begin
+    if(reset)
+        begin
+            mdata= 0;
+         end
+    else
+    begin
     case(current_state)
     REFILL:
     begin
@@ -115,6 +121,7 @@ begin
     end
     end
     endcase
+    end
 end
 
 
@@ -153,7 +160,7 @@ end
 
 // Ð´ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½Ð´Ö±ï¿½ï·¨ï¿½ï¿½
 /* TODO */
-
+// Ð´cache²Ù×÷
 
 always @(posedge clk) begin
     if (reset) begin
@@ -161,28 +168,8 @@ always @(posedge clk) begin
         waddr_to_mem <= 0;
         wdata_to_mem<=0;
         mWrite<=0;
-//        rr<=0;
     end else begin
         case(current_state)
-        READY:
-        begin
-        if(wreq_from_cpu)
-        begin
-//        rr<=1;
-        wreq_to_mem <= 0;
-        waddr_to_mem <= 0;
-        wdata_to_mem<=0;
-        mWrite<=0;
-        end
-        else
-        begin
-        mWrite<=0;
-//         rr<=0;
-        wreq_to_mem <= 0;
-        waddr_to_mem <= 0;
-        wdata_to_mem<=0;
-        end
-        end
         TAG_CHECK:
         begin
         if(hit && wreq_from_cpu)
@@ -199,7 +186,6 @@ always @(posedge clk) begin
         waddr_to_mem <= 0;
         wdata_to_mem<=0;
         mWrite<=0;
-//        rr<=0;
         end
 
         endcase 
