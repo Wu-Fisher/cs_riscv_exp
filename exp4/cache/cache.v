@@ -117,7 +117,9 @@ begin
     begin
     if(wreq_from_cpu)
     begin
-    mdata= wdata_from_cpu;
+    mdata=(offset == 2'b00) ? {cache_line[31:8],wdata_from_cpu} :
+                      (offset == 2'b01) ? {cache_line[31:16],wdata_from_cpu,cache_line[7:0]} :
+                      (offset == 2'b10) ?{cache_line[31:24],wdata_from_cpu,cache_line[15:0]}: {wdata_from_cpu,cache_line[23:0]};
     end
     end
     endcase

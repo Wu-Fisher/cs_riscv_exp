@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1446920500000fs"></ZoomStartTime>
-      <ZoomEndTime time="1447502000001fs"></ZoomEndTime>
-      <Cursor1Time time="1447190000000fs"></Cursor1Time>
+      <ZoomStartTime time="1440844833000fs"></ZoomStartTime>
+      <ZoomEndTime time="1446549833001fs"></ZoomEndTime>
+      <Cursor1Time time="1441830000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="313"></NameColumnWidth>
-      <ValueColumnWidth column_width="118"></ValueColumnWidth>
+      <NameColumnWidth column_width="311"></NameColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="27" />
    <wvobject fp_name="/testbench/clk" type="logic">
@@ -68,10 +68,22 @@
       <obj_property name="ElementShortName">cache_whit</obj_property>
       <obj_property name="ObjectShortName">cache_whit</obj_property>
    </wvobject>
+   <wvobject fp_name="/testbench/g0/cache0/wea" type="logic">
+      <obj_property name="ElementShortName">wea</obj_property>
+      <obj_property name="ObjectShortName">wea</obj_property>
+   </wvobject>
    <wvobject fp_name="/testbench/g0/cache_rdata" type="array">
       <obj_property name="ElementShortName">cache_rdata[7:0]</obj_property>
       <obj_property name="ObjectShortName">cache_rdata[7:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/g0/cache0/current_state" type="array">
+      <obj_property name="ElementShortName">current_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">current_state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/g0/rvalid_mem2cache" type="logic">
+      <obj_property name="ElementShortName">rvalid_mem2cache</obj_property>
+      <obj_property name="ObjectShortName">rvalid_mem2cache</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/g0/trace_rdata" type="array">
       <obj_property name="ElementShortName">trace_rdata[7:0]</obj_property>
@@ -117,18 +129,5 @@
    <wvobject fp_name="/testbench/g0/rdata_mem2cache" type="array">
       <obj_property name="ElementShortName">rdata_mem2cache[31:0]</obj_property>
       <obj_property name="ObjectShortName">rdata_mem2cache[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/g0/rvalid_mem2cache" type="logic">
-      <obj_property name="ElementShortName">rvalid_mem2cache</obj_property>
-      <obj_property name="ObjectShortName">rvalid_mem2cache</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/g0/cache0/wea" type="logic">
-      <obj_property name="ElementShortName">wea</obj_property>
-      <obj_property name="ObjectShortName">wea</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/g0/cache0/current_state" type="array">
-      <obj_property name="ElementShortName">current_state[3:0]</obj_property>
-      <obj_property name="ObjectShortName">current_state[3:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
 </wave_config>

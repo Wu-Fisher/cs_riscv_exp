@@ -180,6 +180,7 @@ always @(*) begin
             if (cache_hit & !cache_whit) begin
                 next_state = IDLE;
             end else if (cache_hit & cache_whit) begin
+//            end else if (cache_whit) begin
                 next_state = READ_CACHE;
             end else begin
                 next_state = FLUSH_CLINE;
