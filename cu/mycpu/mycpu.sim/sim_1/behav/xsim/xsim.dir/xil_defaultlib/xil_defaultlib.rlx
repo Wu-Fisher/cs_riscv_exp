@@ -1,0 +1,8 @@
+0.6
+2018.3
+Dec  6 2018
+23:39:36
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sim_1/new/cpuclk_sim.v,1656039237,verilog,,,,cpuclk_sim,,,../../../../mycpu.srcs/sources_1/ip/cpuclk,,,,,
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.v,1656039098,verilog,,/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sim_1/new/cpuclk_sim.v,,cpuclk,,,../../../../mycpu.srcs/sources_1/ip/cpuclk,,,,,
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v,1656039098,verilog,,/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.v,,cpuclk_clk_wiz,,,../../../../mycpu.srcs/sources_1/ip/cpuclk,,,,,
