@@ -1,18 +1,5 @@
 module cpucon_sim();
-// module controller(
-//     input[31:0] inst_i,
-//     input breq_i,
-//     input brgt_i,
-//     input brlt_i,
-//     output wire pcsel_o,
-//     output wire regwen_o,
-//     output wire[1:0]wbsel_o,
-//     output wire[2:0]sext_o,
-//     output wire[3:0]aluop_o,
-//     output wire asel_o,
-//     output wire bsel_o,
-//     output wire memrw_o
-// );
+
 
 wire[31:0] inst_i;
 wire breq_i;
@@ -26,8 +13,10 @@ wire[3:0] aluop_o;
 wire asel_o;
 wire bsel_o;
 wire memrw_o;
+reg[31:0] ii;
 
-assign inst_i=0;
+
+assign inst_i=ii;
 assign breq_i=1;
 assign brgt_i=0;
 assign brlt_i=0;
@@ -49,5 +38,39 @@ controller cpucon_sim_controller(
 );
 
 
+// FFFFF4B7		lui 
+// 00100A93		addi
+// 00200B13		addi
+// 0704A403		lw x
+// 0FF47913		andi
+// 01891913		slli
+// 41895913		srai
+// 40845993		srai
+// 0FF9F993		andi
+// 01899993		slli
+// 4189D993		srai
+// 41545A13		srai
+// 007A7A13		andi
+// 000002B3		add 
+// 045A0263		beq 
 
+initial begin
+    ii = 32'hFFFFF4B7;
+    #50
+    ii =  32'h00100A93;
+    #50
+    ii =  32'h0704A403;// lw
+    #30
+    ii =  32'h0FF47913;//andi
+    #40
+    ii =  32'h01891913;//slli
+    #50
+    ii =  32'h000002B3;//add
+    #60
+    ii =  32'h045A0263;//beq
+    #70 //jal
+    ii =  32'h0080006F;
+    #80  //ss
+    ii = 32'h0664A023;
+end
 endmodule

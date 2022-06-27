@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sim_1/new/cpucon_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpucon_sim

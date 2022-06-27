@@ -8,14 +8,14 @@ module top(
     output [31:0] debug_wb_value        // WB阶段写入寄存器的值 (若wb_ena或wb_have_inst=0，此项可为任意值)
 );
 
-mini_rv mini_rv_u (
-    .clk(clk),
-    .rst_n(rst_n),
-    //......
-);
+//mini_rv mini_rv_u (
+//    .clk(clk),
+//    .rst_n(rst_n),
+//    //......
+//);
 // 下面两个模块，只需要实例化并连线，不需要添加文件
 inst_mem imem(
-
+    
 );
 
 data_mem dmem(
