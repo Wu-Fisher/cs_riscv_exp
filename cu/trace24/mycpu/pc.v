@@ -17,12 +17,12 @@ always @(posedge clk) begin
     else begin
         if(rr==1)
         begin
+            pc <= 0;
+            pcadd <= 4;
             rr<=0;
         end
         else
         begin
-            
-        
         pc <= din;
         pcadd <= din + 4;
         end
