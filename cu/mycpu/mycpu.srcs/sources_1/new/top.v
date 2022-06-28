@@ -8,17 +8,53 @@ module top(
     output [31:0] debug_wb_value        // WB阶段写入寄存器的值 (若wb_ena或wb_have_inst=0，此项可为任意值)
 );
 
-//mini_rv mini_rv_u (
-//    .clk(clk),
-//    .rst_n(rst_n),
-//    //......
-//);
+wire[31:0] wr_imm_rv_inst;
+wire[31:0] wr_dmm_rv_data;
+
+wire[31:0] wr_rv_pc;
+wire[13:0] wr_imm_pc;
+assign wr_imm_pc=wr_rv_pc[15:2];
+
+wire wr_rv_dmm_wb;
+wire [31:0]wr_rv_dmm_data;
+wire [31:0]wr_rv_dmm_addr;
+
+assign debug_wb_have_inst=1;
+assign debug_wb_pc=wr_rv_pc;
+assign debug_wb_ena = wr_rv_dmm_wb;
+assign debug_wb_reg = wr_imm_rv_inst[11:7];
+assign debug_wb_value = wr_dmm_rv_data;
+
+
+rv_u u_rv_u(
+    .clk       (clk       ),
+    .rst_n     (rst_n     ),
+
+    .inst_i    (wr_imm_rv_inst    ),
+    .wbdata_i  (wr_dmm_rv_data    ),
+
+    .pc_o      (  wr_rv_pc    ),
+    .memwb_o   (wr_rv_dmm_wb),
+    .memaddr_o (wr_rv_dmm_addr ),
+    .memdata_o (wr_rv_dmm_data )
+);
+
+
+
+
 // 下面两个模块，只需要实例化并连线，不需要添加文件
 inst_mem imem(
-    
+    .a (wr_imm_pc),
+    .spo (wr_imm_rv_inst)
 );
 
 data_mem dmem(
+    .clk(clk),
+    .a(wr_rv_dmm_addr[15:2]),
 
+    .we(wr_rv_dmm_wb),
+    .d(wr_rv_dmm_data),
+
+    .spo(wr_dmm_rv_data)
 );
 endmodule
