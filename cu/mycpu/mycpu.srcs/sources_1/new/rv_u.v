@@ -8,10 +8,7 @@ module rv_u(
     output[31:0] pc_o,
     output memwb_o,
     output[31:0] memaddr_o,
-    output[31:0] memdata_o,
-    
-    output regwb_o,
-    output [31:0] wbdata_o
+    output[31:0] memdata_o
 
 );
 
@@ -39,7 +36,6 @@ module rv_u(
     assign wr_im_rf_r1 = inst_i[19:15];
     assign wr_im_rf_r2 = inst_i[24:20];
     assign wr_im_rf_rd = inst_i[11:7];
-    assign wbdata_o = wr_wb_rf;
 
 
     // sext
@@ -75,8 +71,6 @@ module rv_u(
     // wb
     wire[1:0] wr_control_wb;
     
-        assign regwb_o = wr_control_rf;
-
     npc u_npc(
         .Pcsel  ( wr_control_npc  ),
         .Pcnext ( wr_pcadd_npc ),

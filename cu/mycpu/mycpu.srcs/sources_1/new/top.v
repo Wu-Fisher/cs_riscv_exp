@@ -1,11 +1,23 @@
 module top(
-    input clk,
-    input rst_n,
-    output        debug_wb_have_inst,   // WB阶段是否有指令 (对单周期CPU，此flag恒为1)
-    output [31:0] debug_wb_pc,          // WB阶段的PC (若wb_have_inst=0，此项可为任意值)
-    output        debug_wb_ena,         // WB阶段的寄存器写使能 (若wb_have_inst=0，此项可为任意值)
-    output [4:0]  debug_wb_reg,         // WB阶段写入的寄存器号 (若wb_ena或wb_have_inst=0，此项可为任意值)
-    output [31:0] debug_wb_value        // WB阶段写入寄存器的值 (若wb_ena或wb_have_inst=0，此项可为任意值)
+    input wire clk_i,
+    input  wire rst_i,
+    output wire led0_en_o,
+    output wire led1_en_o,
+    output wire led2_en_o,
+    output wire led3_en_o,
+    output wire led4_en_o,
+    output wire led5_en_o,
+    output wire led6_en_o,
+    output wire led7_en_o,
+    output wire led_ca_o,
+    output wire led_cb_o,
+    output wire led_cc_o,
+    output wire led_cd_o,
+    output wire led_ce_o,
+    output wire led_cf_o,
+    output wire led_cg_o,
+    output wire led_dp_o
+
 );
 
 wire[31:0] wr_imm_rv_inst;
@@ -19,11 +31,10 @@ wire wr_rv_dmm_wb;
 wire [31:0]wr_rv_dmm_data;
 wire [31:0]wr_rv_dmm_addr;
 
-assign debug_wb_have_inst=1;
-assign debug_wb_pc=wr_rv_pc;
-//assign debug_wb_ena = wr_rv_dmm_wb;
-assign debug_wb_reg = wr_imm_rv_inst[11:7];
-// assign debug_wb_value = wr_rv_dmm_addr;
+// dram 和 rom统一编址
+wire [31:0] waddr_tmp;
+
+assign waddr_tmp = wr_rv_dmm_addr - 16'h4000;
 
 
 rv_u u_rv_u(
@@ -32,30 +43,28 @@ rv_u u_rv_u(
 
     .inst_i    (wr_imm_rv_inst    ),
     .wbdata_i  (wr_dmm_rv_data    ),
-    .regwb_o(debug_wb_ena),
     .pc_o      (  wr_rv_pc    ),
     .memwb_o   (wr_rv_dmm_wb),
     .memaddr_o (wr_rv_dmm_addr ),
-    .memdata_o (wr_rv_dmm_data ),
-    .wbdata_o  (debug_wb_value )
+    .memdata_o (wr_rv_dmm_data )
 );
 
 
 
 
 // 下面两个模块，只需要实例化并连线，不需要添加文件
-inst_mem imem(
-    .a (wr_imm_pc),
-    .spo (wr_imm_rv_inst)
-);
+//prgrom u_prgrom(
+//    .a (wr_imm_pc),
+//    .spo (wr_imm_rv_inst)
+//);
 
-data_mem dmem(
-    .clk(clk),
-    .a(wr_rv_dmm_addr[15:2]),
+//dram u_dram(
+//    .clk(clk),
+//    .a(waddr_tmp[15:2]),
 
-    .we(wr_rv_dmm_wb),
-    .d(wr_rv_dmm_data),
+//    .we(wr_rv_dmm_wb),
+//    .d(wr_rv_dmm_data),
 
-    .spo(wr_dmm_rv_data)
-);
+//    .spo(wr_dmm_rv_data)
+//);
 endmodule
