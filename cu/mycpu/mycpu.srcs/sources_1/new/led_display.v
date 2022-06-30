@@ -6,6 +6,8 @@ module led_display #
     input[31:0] led_data_i,
     input clk,
     input rst_n,
+    input en,
+
     output wire led0_en_o,
     output wire led1_en_o,
     output wire led2_en_o,
@@ -14,18 +16,27 @@ module led_display #
     output wire led5_en_o,
     output wire led6_en_o,
     output wire led7_en_o,
-    output reg led_ca_o,
-    output reg led_cb_o,
-    output reg led_cc_o,
-    output reg led_cd_o,
-    output reg led_ce_o,
-    output reg led_cf_o,
-    output reg led_cg_o,
-    output reg led_dp_o
+//    output reg led_ca_o,
+//    output reg led_cb_o,
+//    output reg led_cc_o,
+//    output reg led_cd_o,
+//    output reg led_ce_o,
+//    output reg led_cf_o,
+//    output reg led_cg_o,
+//    output reg led_dp_o
+    output wire led_ca_o,
+    output wire led_cb_o,
+    output wire led_cc_o,
+    output wire led_cd_o,
+    output wire led_ce_o,
+    output wire led_cf_o,
+    output wire led_cg_o,
+    output wire led_dp_o
 );
 reg[2:0] bias;
-reg[10:0]cnts;
-reg[7:0] seps[0:15];
+reg[31:0]cnts;
+reg[6:0] seps[0:15];
+reg[31:0] reg_led_data;
 
 parameter   NUM0     =7'b1000000,
             NUM1     = 7'b1111001,
@@ -49,7 +60,7 @@ assign {led7_en_o, led6_en_o, led5_en_o, led4_en_o, led3_en_o, led2_en_o, led1_e
 
 
 always @(posedge clk) begin
-    if(!rst_n)
+    if(!rst_n || en)
     begin
         cnts<=0;
         bias<=0;        
@@ -89,23 +100,40 @@ always @(posedge clk) begin
     
 end
 
-wire[3:0] idx;
-
-
-assign idx = {led_data_i[4*bias+3],led_data_i[4*bias+2],led_data_i[4*bias+1],led_data_i[4*bias]}; 
-
 always @(posedge clk) begin
     if(!rst_n)
     begin
-        {led_dp_o,led_cg_o,led_cf_o,led_ce_o,led_cd_o,led_cc_o,led_cb_o,led_ca_o}<=8'b0;
+        reg_led_data<=0;
     end
-    else
+    else if(en)
     begin
-        {led_dp_o,led_cg_o,led_cf_o,led_ce_o,led_cd_o,led_cc_o,led_cb_o,led_ca_o}<={1'b1,seps[idx]};
-
+        reg_led_data<=led_data_i;
     end
     
 end
+
+wire[3:0] idx;
+
+
+assign idx = {reg_led_data[4*bias+3],reg_led_data[4*bias+2],reg_led_data[4*bias+1],reg_led_data[4*bias]}; 
+
+//always @(posedge clk) begin
+//    if(!rst_n)
+//    begin
+//        {led_dp_o,led_cg_o,led_cf_o,led_ce_o,led_cd_o,led_cc_o,led_cb_o,led_ca_o}<=8'b0;
+//    end
+//    else
+//    begin
+//        {led_dp_o,led_cg_o,led_cf_o,led_ce_o,led_cd_o,led_cc_o,led_cb_o,led_ca_o}<={1'b1,seps[idx]};
+
+//    end
+    
+    
+    
+//end
+
+
+assign {led_dp_o,led_cg_o,led_cf_o,led_ce_o,led_cd_o,led_cc_o,led_cb_o,led_ca_o}=rst_n?{1'b1,seps[idx]}:{1'b1,7'b0};
 
 
 

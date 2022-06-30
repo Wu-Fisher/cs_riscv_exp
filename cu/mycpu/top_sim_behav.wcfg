@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_sim_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_sim" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="12172000000fs"></ZoomStartTime>
+      <ZoomEndTime time="12461000001fs"></ZoomEndTime>
+      <Cursor1Time time="12242500000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="261"></NameColumnWidth>
+      <ValueColumnWidth column_width="205"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="60" />
+   <wvobject type="logic" fp_name="/top_sim/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/led_ens">
+      <obj_property name="ElementShortName">led_ens[7:0]</obj_property>
+      <obj_property name="ObjectShortName">led_ens[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/led_dat">
+      <obj_property name="ElementShortName">led_dat[7:0]</obj_property>
+      <obj_property name="ObjectShortName">led_dat[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_regfile/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_pc/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_pc/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_pc/din">
+      <obj_property name="ElementShortName">din[31:0]</obj_property>
+      <obj_property name="ObjectShortName">din[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_pc/pc">
+      <obj_property name="ElementShortName">pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_pc/pcadd">
+      <obj_property name="ElementShortName">pcadd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pcadd[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_alu/alu_src_a">
+      <obj_property name="ElementShortName">alu_src_a[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_src_a[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_alu/alu_src_b">
+      <obj_property name="ElementShortName">alu_src_b[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_src_b[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_alu/alu_op">
+      <obj_property name="ElementShortName">alu_op[3:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_op[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_alu/alu_out">
+      <obj_property name="ElementShortName">alu_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_out[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_regfile/raddr1">
+      <obj_property name="ElementShortName">raddr1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">raddr1[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_regfile/raddr2">
+      <obj_property name="ElementShortName">raddr2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">raddr2[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_regfile/rdata1">
+      <obj_property name="ElementShortName">rdata1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_regfile/rdata2">
+      <obj_property name="ElementShortName">rdata2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_regfile/we">
+      <obj_property name="ElementShortName">we</obj_property>
+      <obj_property name="ObjectShortName">we</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_regfile/waddr">
+      <obj_property name="ElementShortName">waddr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">waddr[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_regfile/wdata">
+      <obj_property name="ElementShortName">wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_regfile/reg_array">
+      <obj_property name="ElementShortName">reg_array[31:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_array[31:0][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_i">
+      <obj_property name="ElementShortName">inst_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/breq_i">
+      <obj_property name="ElementShortName">breq_i</obj_property>
+      <obj_property name="ObjectShortName">breq_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/brgt_i">
+      <obj_property name="ElementShortName">brgt_i</obj_property>
+      <obj_property name="ObjectShortName">brgt_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/brlt_i">
+      <obj_property name="ElementShortName">brlt_i</obj_property>
+      <obj_property name="ObjectShortName">brlt_i</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/pcsel_o">
+      <obj_property name="ElementShortName">pcsel_o</obj_property>
+      <obj_property name="ObjectShortName">pcsel_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/regwen_o">
+      <obj_property name="ElementShortName">regwen_o</obj_property>
+      <obj_property name="ObjectShortName">regwen_o</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_controller/wbsel_o">
+      <obj_property name="ElementShortName">wbsel_o[1:0]</obj_property>
+      <obj_property name="ObjectShortName">wbsel_o[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_controller/sext_o">
+      <obj_property name="ElementShortName">sext_o[2:0]</obj_property>
+      <obj_property name="ObjectShortName">sext_o[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_controller/aluop_o">
+      <obj_property name="ElementShortName">aluop_o[3:0]</obj_property>
+      <obj_property name="ObjectShortName">aluop_o[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/asel_o">
+      <obj_property name="ElementShortName">asel_o</obj_property>
+      <obj_property name="ObjectShortName">asel_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/bsel_o">
+      <obj_property name="ElementShortName">bsel_o</obj_property>
+      <obj_property name="ObjectShortName">bsel_o</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/memrw_o">
+      <obj_property name="ElementShortName">memrw_o</obj_property>
+      <obj_property name="ObjectShortName">memrw_o</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_controller/instm">
+      <obj_property name="ElementShortName">instm[8:0]</obj_property>
+      <obj_property name="ObjectShortName">instm[8:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_add">
+      <obj_property name="ElementShortName">inst_add</obj_property>
+      <obj_property name="ObjectShortName">inst_add</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_sub">
+      <obj_property name="ElementShortName">inst_sub</obj_property>
+      <obj_property name="ObjectShortName">inst_sub</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_and">
+      <obj_property name="ElementShortName">inst_and</obj_property>
+      <obj_property name="ObjectShortName">inst_and</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_or">
+      <obj_property name="ElementShortName">inst_or</obj_property>
+      <obj_property name="ObjectShortName">inst_or</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_xor">
+      <obj_property name="ElementShortName">inst_xor</obj_property>
+      <obj_property name="ObjectShortName">inst_xor</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_sll">
+      <obj_property name="ElementShortName">inst_sll</obj_property>
+      <obj_property name="ObjectShortName">inst_sll</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_srl">
+      <obj_property name="ElementShortName">inst_srl</obj_property>
+      <obj_property name="ObjectShortName">inst_srl</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_sra">
+      <obj_property name="ElementShortName">inst_sra</obj_property>
+      <obj_property name="ObjectShortName">inst_sra</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_addi">
+      <obj_property name="ElementShortName">inst_addi</obj_property>
+      <obj_property name="ObjectShortName">inst_addi</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_andi">
+      <obj_property name="ElementShortName">inst_andi</obj_property>
+      <obj_property name="ObjectShortName">inst_andi</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_ori">
+      <obj_property name="ElementShortName">inst_ori</obj_property>
+      <obj_property name="ObjectShortName">inst_ori</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_xori">
+      <obj_property name="ElementShortName">inst_xori</obj_property>
+      <obj_property name="ObjectShortName">inst_xori</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_slli">
+      <obj_property name="ElementShortName">inst_slli</obj_property>
+      <obj_property name="ObjectShortName">inst_slli</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_srli">
+      <obj_property name="ElementShortName">inst_srli</obj_property>
+      <obj_property name="ObjectShortName">inst_srli</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_srai">
+      <obj_property name="ElementShortName">inst_srai</obj_property>
+      <obj_property name="ObjectShortName">inst_srai</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_lw">
+      <obj_property name="ElementShortName">inst_lw</obj_property>
+      <obj_property name="ObjectShortName">inst_lw</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_jalr">
+      <obj_property name="ElementShortName">inst_jalr</obj_property>
+      <obj_property name="ObjectShortName">inst_jalr</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_sw">
+      <obj_property name="ElementShortName">inst_sw</obj_property>
+      <obj_property name="ObjectShortName">inst_sw</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_beq">
+      <obj_property name="ElementShortName">inst_beq</obj_property>
+      <obj_property name="ObjectShortName">inst_beq</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_bne">
+      <obj_property name="ElementShortName">inst_bne</obj_property>
+      <obj_property name="ObjectShortName">inst_bne</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_blt">
+      <obj_property name="ElementShortName">inst_blt</obj_property>
+      <obj_property name="ObjectShortName">inst_blt</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_bge">
+      <obj_property name="ElementShortName">inst_bge</obj_property>
+      <obj_property name="ObjectShortName">inst_bge</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_lui">
+      <obj_property name="ElementShortName">inst_lui</obj_property>
+      <obj_property name="ObjectShortName">inst_lui</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_jal">
+      <obj_property name="ElementShortName">inst_jal</obj_property>
+      <obj_property name="ObjectShortName">inst_jal</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_controller/bjump">
+      <obj_property name="ElementShortName">bjump</obj_property>
+      <obj_property name="ObjectShortName">bjump</obj_property>
+   </wvobject>
+</wave_config>

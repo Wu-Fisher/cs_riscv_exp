@@ -1,4 +1,4 @@
-create_clock -name clk -period 10 [get_ports clk_i]
+create_clock -period 10 [get_ports clk_i]
 
 # fa
 set_property PACKAGE_PIN R1 [get_ports rst_i]
