@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="12172000000fs"></ZoomStartTime>
-      <ZoomEndTime time="12461000001fs"></ZoomEndTime>
-      <Cursor1Time time="12242500000fs"></Cursor1Time>
+      <ZoomStartTime time="29903000000fs"></ZoomStartTime>
+      <ZoomEndTime time="30003400001fs"></ZoomEndTime>
+      <Cursor1Time time="29959800000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="261"></NameColumnWidth>
-      <ValueColumnWidth column_width="205"></ValueColumnWidth>
+      <ValueColumnWidth column_width="200"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="60" />
+   <WVObjectSize size="73" />
    <wvobject type="logic" fp_name="/top_sim/rst_n">
       <obj_property name="ElementShortName">rst_n</obj_property>
       <obj_property name="ObjectShortName">rst_n</obj_property>
@@ -27,6 +27,26 @@
    <wvobject type="logic" fp_name="/top_sim/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_led_display/led_data_i">
+      <obj_property name="ElementShortName">led_data_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">led_data_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_led_display/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_led_display/rst_n">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_led_display/reg_led_data">
+      <obj_property name="ElementShortName">reg_led_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_led_data[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_led_display/idx">
+      <obj_property name="ElementShortName">idx[3:0]</obj_property>
+      <obj_property name="ObjectShortName">idx[3:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_sim/led_ens">
       <obj_property name="ElementShortName">led_ens[7:0]</obj_property>
@@ -76,6 +96,38 @@
       <obj_property name="ElementShortName">alu_out[31:0]</obj_property>
       <obj_property name="ObjectShortName">alu_out[31:0]</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_switch/sw_data_i">
+      <obj_property name="ElementShortName">sw_data_i[23:0]</obj_property>
+      <obj_property name="ObjectShortName">sw_data_i[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_switch/sw_data_o">
+      <obj_property name="ElementShortName">sw_data_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">sw_data_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_sw_interface/clk_i">
+      <obj_property name="ElementShortName">clk_i</obj_property>
+      <obj_property name="ObjectShortName">clk_i</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_sw_interface/addr_al_i">
+      <obj_property name="ElementShortName">addr_al_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_al_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/top_sim/u_top/u_sw_interface/wen_al_i">
+      <obj_property name="ElementShortName">wen_al_i</obj_property>
+      <obj_property name="ObjectShortName">wen_al_i</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_sw_interface/wdata_al_i">
+      <obj_property name="ElementShortName">wdata_al_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata_al_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_sw_interface/wdata_sw_i">
+      <obj_property name="ElementShortName">wdata_sw_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata_sw_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_sw_interface/rdata_sw_o">
+      <obj_property name="ElementShortName">rdata_sw_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_sw_o[31:0]</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_regfile/raddr1">
       <obj_property name="ElementShortName">raddr1[4:0]</obj_property>
       <obj_property name="ObjectShortName">raddr1[4:0]</obj_property>
@@ -107,7 +159,6 @@
    <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_regfile/reg_array">
       <obj_property name="ElementShortName">reg_array[31:0][31:0]</obj_property>
       <obj_property name="ObjectShortName">reg_array[31:0][31:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_sim/u_top/u_rv_u/u_controller/inst_i">
       <obj_property name="ElementShortName">inst_i[31:0]</obj_property>

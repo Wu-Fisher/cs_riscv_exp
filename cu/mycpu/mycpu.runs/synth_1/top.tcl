@@ -17,6 +17,9 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-194851-wufisher-TK/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a100tfgg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -32,6 +35,7 @@ set_property ip_output_repo /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.cache
 set_property ip_cache_permissions {read write} [current_project]
 add_files /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/prgrom/inst_ram.coe
 add_files /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/dram/data_ram.coe
+add_files /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/prgrom/cal_ram.coe
 read_verilog -library xil_defaultlib {
   /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/al_interface.v
   /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/aline.v
@@ -45,6 +49,8 @@ read_verilog -library xil_defaultlib {
   /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/regfile.v
   /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/rv_u.v
   /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/sext.v
+  /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/sw_interface.v
+  /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/switch.v
   /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/wb_mux.v
   /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/top.v
 }

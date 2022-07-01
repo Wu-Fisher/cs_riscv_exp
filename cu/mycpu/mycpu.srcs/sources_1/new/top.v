@@ -1,6 +1,9 @@
 module top(
     input wire clk_i,
     input  wire rst_i,
+
+    input wire [23:0] switch_i,
+
     output wire led0_en_o,
     output wire led1_en_o,
     output wire led2_en_o,
@@ -61,9 +64,18 @@ wire [31:0] wr_al_d2_addr;
 wire [31:0] wr_d2_al_data;
 assign wr_d2_al_data =0;
 
+wire clk_al_d3;
+wire wr_al_d3_wb;
+wire [31:0] wr_al_d3_data;
+wire [31:0] wr_al_d3_addr;
+wire [31:0] wr_d3_al_data;
+
 
 wire clk_d2_led;
 wire[31:0] wr_d2_led_data;
+wire wr_d2_led_wb;
+
+wire[31:0] wr_sw_d3_data;
 
 // dram 和 rom统一编址
 wire [31:0] waddr_tmp;
@@ -102,9 +114,18 @@ aline u_aline(
     .wen_d2_o    (wr_al_d2_wb   ),
     .wdata_d2_o  (wr_al_d2_data ),
     .addr_d2_o   (wr_al_d2_addr ),
-    .rdata_d2_i  (wr_d2_al_data )
+    .rdata_d2_i  (wr_d2_al_data ),
+
+    .clk_d3_o    (clk_al_d3    ),
+    .wen_d3_o    (wr_al_d3_wb),
+    .wdata_d3_o  (wr_al_d3_data),
+    .addr_d3_o   (wr_al_d3_addr),
+    .rdata_d3_i  (wr_d3_al_data)
+
+
+
 );
-wire wr_d2_led_wb;
+
 al_interface u_al_interface(
     .clk_i       (clk_al_d2 ),
     .addr_al_i   (wr_al_d2_addr   ),
@@ -115,9 +136,25 @@ al_interface u_al_interface(
     .rdata_led_o (wr_d2_led_data )
 );
 
+sw_interface u_sw_interface(
+    .clk_i      (clk_al_d3      ),
+    .addr_al_i  (wr_al_d3_addr  ),
+    .wen_al_i   (wr_al_d3_wb   ),
+    .wdata_al_i (wr_al_d3_data ),
+    .wdata_sw_i (wr_sw_d3_data ),
+    .rdata_sw_o (wr_d3_al_data )
+);
+
+switch u_switch(
+    .sw_data_i (switch_i),
+    .sw_data_o (wr_sw_d3_data )
+);
+
+
+
 led_display 
 #(
-    .TIMES (32'd9999 )
+    .TIMES (32'd2 )
 )
 u_led_display(
     .led_data_i (wr_d2_led_data ),

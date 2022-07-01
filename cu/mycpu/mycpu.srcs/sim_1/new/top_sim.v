@@ -5,9 +5,11 @@ module top_sim (
 
 reg  rst_n;
 reg  clk;
+reg[23:0] switch;
 initial begin
     rst_n=1;
     clk=1;
+    switch=24'b111_00000_00000110_00001000;
     # 10000000 rst_n=0;
 
 
@@ -38,7 +40,8 @@ top u_top(
     .led_ce_o  (led_dat[4]   ),
     .led_cf_o  (led_dat[5]   ),
     .led_cg_o  (led_dat[6]   ),
-    .led_dp_o  (led_dat[7]   )
+    .led_dp_o  (led_dat[7]   ),
+    .switch_i(switch)
 );
 
 
