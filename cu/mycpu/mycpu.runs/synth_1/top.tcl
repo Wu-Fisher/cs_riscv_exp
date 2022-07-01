@@ -17,9 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-194851-wufisher-TK/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a100tfgg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -44,6 +41,8 @@ read_verilog -library xil_defaultlib {
   /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/branch.v
   /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/controller.v
   /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/led_display.v
+  /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/lg_interface.v
+  /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/lights.v
   /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/npc.v
   /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/pc.v
   /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/regfile.v

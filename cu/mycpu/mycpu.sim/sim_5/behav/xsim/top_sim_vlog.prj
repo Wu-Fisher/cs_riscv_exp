@@ -11,6 +11,8 @@ verilog xil_defaultlib  --include "../../../../mycpu.srcs/sources_1/ip/cpuclk" \
 "../../../../mycpu.srcs/sources_1/new/branch.v" \
 "../../../../mycpu.srcs/sources_1/new/controller.v" \
 "../../../../mycpu.srcs/sources_1/new/led_display.v" \
+"../../../../mycpu.srcs/sources_1/new/lg_interface.v" \
+"../../../../mycpu.srcs/sources_1/new/lights.v" \
 "../../../../mycpu.srcs/sources_1/new/npc.v" \
 "../../../../mycpu.srcs/sources_1/new/pc.v" \
 "../../../../mycpu.srcs/sources_1/new/regfile.v" \

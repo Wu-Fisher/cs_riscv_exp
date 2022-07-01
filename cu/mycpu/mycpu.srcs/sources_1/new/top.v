@@ -4,6 +4,8 @@ module top(
 
     input wire [23:0] switch_i,
 
+    output wire[23:0] lights_o,
+
     output wire led0_en_o,
     output wire led1_en_o,
     output wire led2_en_o,
@@ -70,12 +72,31 @@ wire [31:0] wr_al_d3_data;
 wire [31:0] wr_al_d3_addr;
 wire [31:0] wr_d3_al_data;
 
+wire clk_al_d4;
+wire wr_al_d4_wb;
+wire [31:0] wr_al_d4_data;
+wire [31:0] wr_al_d4_addr;
+wire [31:0] wr_d4_al_data;
+assign wr_d4_al_data =0;
 
+
+
+
+// led
 wire clk_d2_led;
 wire[31:0] wr_d2_led_data;
 wire wr_d2_led_wb;
 
+
+// switch
 wire[31:0] wr_sw_d3_data;
+
+// lights
+wire clk_d4_lgs;
+wire[31:0] wr_d4_lgs_data;
+wire wr_d4_lgs_wb;
+
+
 
 // dram 和 rom统一编址
 wire [31:0] waddr_tmp;
@@ -120,11 +141,20 @@ aline u_aline(
     .wen_d3_o    (wr_al_d3_wb),
     .wdata_d3_o  (wr_al_d3_data),
     .addr_d3_o   (wr_al_d3_addr),
-    .rdata_d3_i  (wr_d3_al_data)
+    .rdata_d3_i  (wr_d3_al_data),
+
+    .clk_d4_o    (clk_al_d4    ),
+    .wen_d4_o    (wr_al_d4_wb),
+    .wdata_d4_o  (wr_al_d4_data),
+    .addr_d4_o   (wr_al_d4_addr),
+    .rdata_d4_i  (wr_d4_al_data)
+
+
 
 
 
 );
+
 
 al_interface u_al_interface(
     .clk_i       (clk_al_d2 ),
@@ -132,7 +162,7 @@ al_interface u_al_interface(
     .wen_al_i    (wr_al_d2_wb    ),
     .wdata_al_i  (wr_al_d2_data  ),
     .clk_led_o   (clk_d2_led   ),
-    .wen_led_o(wr_d2_led_wb),
+    .wen_led_o  (wr_d2_led_wb),
     .rdata_led_o (wr_d2_led_data )
 );
 
@@ -145,16 +175,33 @@ sw_interface u_sw_interface(
     .rdata_sw_o (wr_d3_al_data )
 );
 
+lg_interface u_lg_interface(
+    .clk_i       (clk_al_d4       ),
+    .addr_al_i   (wr_al_d4_addr   ),
+    .wen_al_i    (wr_al_d4_wb    ),
+    .wdata_al_i  (wr_al_d4_data  ),
+    .clk_lgs_o   (clk_d4_lgs   ),
+    .rdata_lgs_o (wr_d4_lgs_data ),
+    .wen_lgs_o   (wr_d4_lgs_wb   )
+);
+
 switch u_switch(
     .sw_data_i (switch_i),
     .sw_data_o (wr_sw_d3_data )
 );
 
+lights u_lights(
+    .data_i (wr_d4_lgs_data ),
+    .data_o (lights_o ),
+    .en     (wr_d4_lgs_wb     ),
+    .clk    (clk_d4_lgs    ),
+    .rst_n  (rst_n  )
+);
 
 
 led_display 
 #(
-    .TIMES (32'd2 )
+    .TIMES (32'd9999 )
 )
 u_led_display(
     .led_data_i (wr_d2_led_data ),

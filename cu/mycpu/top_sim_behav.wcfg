@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="29903000000fs"></ZoomStartTime>
-      <ZoomEndTime time="30003400001fs"></ZoomEndTime>
-      <Cursor1Time time="29959800000fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="382000001fs"></ZoomEndTime>
+      <Cursor1Time time="12010000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="261"></NameColumnWidth>
-      <ValueColumnWidth column_width="200"></ValueColumnWidth>
+      <ValueColumnWidth column_width="195"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="73" />
+   <WVObjectSize size="72" />
    <wvobject type="logic" fp_name="/top_sim/rst_n">
       <obj_property name="ElementShortName">rst_n</obj_property>
       <obj_property name="ObjectShortName">rst_n</obj_property>
@@ -28,25 +28,9 @@
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/top_sim/u_top/u_led_display/led_data_i">
-      <obj_property name="ElementShortName">led_data_i[31:0]</obj_property>
-      <obj_property name="ObjectShortName">led_data_i[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/top_sim/u_top/u_led_display/clk">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/top_sim/u_top/u_led_display/rst_n">
-      <obj_property name="ElementShortName">rst_n</obj_property>
-      <obj_property name="ObjectShortName">rst_n</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/top_sim/u_top/u_led_display/reg_led_data">
-      <obj_property name="ElementShortName">reg_led_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">reg_led_data[31:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/top_sim/u_top/u_led_display/idx">
-      <obj_property name="ElementShortName">idx[3:0]</obj_property>
-      <obj_property name="ObjectShortName">idx[3:0]</obj_property>
+   <wvobject type="array" fp_name="/top_sim/switch">
+      <obj_property name="ElementShortName">switch[23:0]</obj_property>
+      <obj_property name="ObjectShortName">switch[23:0]</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/top_sim/led_ens">
       <obj_property name="ElementShortName">led_ens[7:0]</obj_property>
@@ -55,6 +39,18 @@
    <wvobject type="array" fp_name="/top_sim/led_dat">
       <obj_property name="ElementShortName">led_dat[7:0]</obj_property>
       <obj_property name="ObjectShortName">led_dat[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/lights">
+      <obj_property name="ElementShortName">lights[23:0]</obj_property>
+      <obj_property name="ObjectShortName">lights[23:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_led_display/led_data_i">
+      <obj_property name="ElementShortName">led_data_i[31:0]</obj_property>
+      <obj_property name="ObjectShortName">led_data_i[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/top_sim/u_top/u_led_display/reg_led_data">
+      <obj_property name="ElementShortName">reg_led_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">reg_led_data[31:0]</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/top_sim/u_top/u_rv_u/u_regfile/clk">
       <obj_property name="ElementShortName">clk</obj_property>

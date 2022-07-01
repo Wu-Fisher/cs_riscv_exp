@@ -29,7 +29,16 @@ module aline(
     output[31:0] wdata_d3_o,
     output[31:0] addr_d3_o,
 
-    input[31:0] rdata_d3_i
+    input[31:0] rdata_d3_i,
+
+
+    // lights
+    output clk_d4_o,
+    output wen_d4_o,
+    output[31:0] wdata_d4_o,
+    output[31:0] addr_d4_o,
+
+    input[31:0] rdata_d4_i
 
 
 );
@@ -37,6 +46,7 @@ module aline(
 wire check_d1=(addr_cpu_i<32'hffff_f000) ;
 wire check_d2=(addr_cpu_i==32'hffff_f000) ;
 wire check_d3=(addr_cpu_i==32'hFFFF_F070);
+wire check_d4=(addr_cpu_i==32'hFFFF_F060);
 
 assign  clk_d1_o=clk_i;
 assign  wen_d1_o=(check_d1)?wen_cpu_i:0;
@@ -53,10 +63,15 @@ assign wen_d3_o=(check_d3)?wen_cpu_i:0;
 assign wdata_d3_o=(check_d3)?wdata_cpu_i:0;
 assign addr_d3_o=(check_d3)?addr_cpu_i:0;
 
+assign clk_d4_o=clk_i;
+assign wen_d4_o=(check_d4)?wen_cpu_i:0;
+assign wdata_d4_o=(check_d4)?wdata_cpu_i:0;
+assign addr_d4_o=(check_d4)?addr_cpu_i:0;
 
 
 
-assign rdata_cpu_o=(check_d1)?rdata_d1_i:(check_d2)?rdata_d2_i:(check_d3)?rdata_d3_i:0;
+
+assign rdata_cpu_o=(check_d1)?rdata_d1_i:(check_d2)?rdata_d2_i:(check_d3)?rdata_d3_i:(check_d4)?rdata_d4_i:0;
 
 
 endmodule

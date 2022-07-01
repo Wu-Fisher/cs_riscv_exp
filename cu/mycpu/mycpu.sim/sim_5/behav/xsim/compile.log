@@ -20,6 +20,10 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/wufisher/hub/cs_riscv_exp/cu/
 INFO: [VRFC 10-311] analyzing module controller
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/led_display.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module led_display
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/lg_interface.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lg_interface
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/lights.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lights
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/npc.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module npc
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/pc.v" into library xil_defaultlib

@@ -60,7 +60,7 @@ assign {led7_en_o, led6_en_o, led5_en_o, led4_en_o, led3_en_o, led2_en_o, led1_e
 
 
 always @(posedge clk) begin
-    if(!rst_n || en)
+    if(!rst_n)
     begin
         cnts<=0;
         bias<=0;        

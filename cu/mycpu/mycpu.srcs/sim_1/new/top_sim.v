@@ -21,6 +21,7 @@ always #2500 clk=!clk;
 
 wire[7:0] led_ens;
 wire[7:0] led_dat;
+wire[23:0] lights;
 
 top u_top(
     .clk_i     (clk     ),
@@ -41,7 +42,8 @@ top u_top(
     .led_cf_o  (led_dat[5]   ),
     .led_cg_o  (led_dat[6]   ),
     .led_dp_o  (led_dat[7]   ),
-    .switch_i(switch)
+    .switch_i(switch),
+    .lights_o(lights)
 );
 
 

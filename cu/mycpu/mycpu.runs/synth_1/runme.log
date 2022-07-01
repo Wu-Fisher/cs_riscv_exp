@@ -14,14 +14,14 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 196535 
+INFO: Helper process launched with PID 231258 
 WARNING: [Synth 8-2507] parameter declaration becomes local in led_display with formal parameter declaration list [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/led_display.v:56]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1427.520 ; gain = 97.367 ; free physical = 3868 ; free virtual = 12972
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1427.508 ; gain = 97.367 ; free physical = 3981 ; free virtual = 13993
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/top.v:1]
-INFO: [Synth 8-6157] synthesizing module 'cpuclk' [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/synth_1/.Xil/Vivado-196520-wufisher-TK/realtime/cpuclk_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'cpuclk' (1#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/synth_1/.Xil/Vivado-196520-wufisher-TK/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'cpuclk' [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/synth_1/.Xil/Vivado-231242-wufisher-TK/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpuclk' (1#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/synth_1/.Xil/Vivado-231242-wufisher-TK/realtime/cpuclk_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'rv_u' [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/rv_u.v:1]
 INFO: [Synth 8-6157] synthesizing module 'npc' [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/npc.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'npc' (2#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/npc.v:1]
@@ -48,9 +48,12 @@ INFO: [Synth 8-6157] synthesizing module 'al_interface' [/home/wufisher/hub/cs_r
 INFO: [Synth 8-6155] done synthesizing module 'al_interface' (13#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/al_interface.v:1]
 INFO: [Synth 8-6157] synthesizing module 'sw_interface' [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/sw_interface.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'sw_interface' (14#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/sw_interface.v:1]
+INFO: [Synth 8-6157] synthesizing module 'lg_interface' [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/lg_interface.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'lg_interface' (15#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/lg_interface.v:1]
 INFO: [Synth 8-6157] synthesizing module 'switch' [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/switch.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'switch' (15#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/switch.v:1]
-WARNING: [Synth 8-689] width (1) of port connection 'sw_data_o' does not match port width (32) of module 'switch' [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/top.v:150]
+INFO: [Synth 8-6155] done synthesizing module 'switch' (16#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/switch.v:1]
+INFO: [Synth 8-6157] synthesizing module 'lights' [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/lights.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'lights' (17#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/lights.v:1]
 INFO: [Synth 8-6157] synthesizing module 'led_display' [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/led_display.v:1]
 	Parameter TIMES bound to: 9999 - type: integer 
 	Parameter NUM0 bound to: 7'b1000000 
@@ -69,12 +72,44 @@ INFO: [Synth 8-6157] synthesizing module 'led_display' [/home/wufisher/hub/cs_ri
 	Parameter NUMD bound to: 7'b0100001 
 	Parameter NUME bound to: 7'b0000110 
 	Parameter NUMF bound to: 7'b0001110 
-INFO: [Synth 8-6155] done synthesizing module 'led_display' (16#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/led_display.v:1]
-INFO: [Synth 8-6157] synthesizing module 'prgrom' [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/synth_1/.Xil/Vivado-196520-wufisher-TK/realtime/prgrom_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'prgrom' (17#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/synth_1/.Xil/Vivado-196520-wufisher-TK/realtime/prgrom_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'dram' [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/synth_1/.Xil/Vivado-196520-wufisher-TK/realtime/dram_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'dram' (18#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/synth_1/.Xil/Vivado-196520-wufisher-TK/realtime/dram_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'top' (19#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/top.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'led_display' (18#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/led_display.v:1]
+INFO: [Synth 8-6157] synthesizing module 'prgrom' [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/synth_1/.Xil/Vivado-231242-wufisher-TK/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'prgrom' (19#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/synth_1/.Xil/Vivado-231242-wufisher-TK/realtime/prgrom_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'dram' [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/synth_1/.Xil/Vivado-231242-wufisher-TK/realtime/dram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dram' (20#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/synth_1/.Xil/Vivado-231242-wufisher-TK/realtime/dram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'top' (21#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/top.v:1]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[31]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[30]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[29]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[28]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[27]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[26]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[25]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[24]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[23]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[22]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[21]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[20]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[19]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[18]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[17]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[16]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[15]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[14]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[13]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[12]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[11]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[10]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[9]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[8]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[7]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[6]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[5]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[4]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[3]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[2]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[1]
+WARNING: [Synth 8-3331] design lg_interface has unconnected port addr_al_i[0]
 WARNING: [Synth 8-3331] design sw_interface has unconnected port clk_i
 WARNING: [Synth 8-3331] design sw_interface has unconnected port addr_al_i[31]
 WARNING: [Synth 8-3331] design sw_interface has unconnected port addr_al_i[30]
@@ -143,41 +178,9 @@ WARNING: [Synth 8-3331] design sw_interface has unconnected port wdata_al_i[0]
 WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[31]
 WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[30]
 WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[29]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[28]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[27]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[26]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[25]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[24]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[23]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[22]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[21]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[20]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[19]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[18]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[17]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[16]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[15]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[14]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[13]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[12]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[11]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[10]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[9]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[8]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[7]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[6]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[5]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[4]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[3]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[2]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[1]
-WARNING: [Synth 8-3331] design al_interface has unconnected port addr_al_i[0]
-WARNING: [Synth 8-3331] design controller has unconnected port inst_i[31]
-WARNING: [Synth 8-3331] design controller has unconnected port inst_i[29]
-WARNING: [Synth 8-3331] design controller has unconnected port inst_i[28]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1459.645 ; gain = 129.492 ; free physical = 3902 ; free virtual = 13006
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1459.633 ; gain = 129.492 ; free physical = 3992 ; free virtual = 14004
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -190,10 +193,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1459.645 ; gain = 129.492 ; free physical = 3904 ; free virtual = 13008
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1459.633 ; gain = 129.492 ; free physical = 3994 ; free virtual = 14006
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1459.645 ; gain = 129.492 ; free physical = 3904 ; free virtual = 13008
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1459.633 ; gain = 129.492 ; free physical = 3994 ; free virtual = 14006
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -211,24 +214,24 @@ WARNING: [Constraints 18-619] A clock with name 'clk_i' already exists, overwrit
 Finished Parsing XDC File [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/constris_1/pin.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/constris_1/pin.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1842.535 ; gain = 0.000 ; free physical = 3639 ; free virtual = 12743
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1842.008 ; gain = 0.000 ; free physical = 3738 ; free virtual = 13751
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1842.535 ; gain = 0.000 ; free physical = 3641 ; free virtual = 12745
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1842.008 ; gain = 0.000 ; free physical = 3738 ; free virtual = 13751
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1842.535 ; gain = 0.000 ; free physical = 3641 ; free virtual = 12745
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1842.535 ; gain = 0.000 ; free physical = 3641 ; free virtual = 12745
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1842.008 ; gain = 0.000 ; free physical = 3738 ; free virtual = 13751
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1842.008 ; gain = 0.000 ; free physical = 3738 ; free virtual = 13751
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1842.535 ; gain = 512.383 ; free physical = 3723 ; free virtual = 12827
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1842.008 ; gain = 511.867 ; free physical = 3814 ; free virtual = 13826
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1842.535 ; gain = 512.383 ; free physical = 3723 ; free virtual = 12827
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1842.008 ; gain = 511.867 ; free physical = 3814 ; free virtual = 13826
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -239,13 +242,13 @@ Applied set_property DONT_TOUCH = true for UCLK. (constraint file  auto generate
 Applied set_property DONT_TOUCH = true for u_prgrom. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for u_dram. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1842.535 ; gain = 512.383 ; free physical = 3724 ; free virtual = 12829
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1842.008 ; gain = 511.867 ; free physical = 3815 ; free virtual = 13827
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "wbsel_o0" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5545] ROM "cnts" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "bias" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1842.535 ; gain = 512.383 ; free physical = 3716 ; free virtual = 12821
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1842.008 ; gain = 511.867 ; free physical = 3805 ; free virtual = 13818
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -265,12 +268,12 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 +---Registers : 
-	               32 Bit    Registers := 4     
+	               32 Bit    Registers := 5     
 	                7 Bit    Registers := 16    
 	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 18    
+	   2 Input     32 Bit        Muxes := 17    
 	   2 Input      8 Bit        Muxes := 1     
 	   9 Input      4 Bit        Muxes := 1     
 	   5 Input      3 Bit        Muxes := 1     
@@ -331,11 +334,15 @@ Detailed RTL Component Info :
 Module aline 
 Detailed RTL Component Info : 
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 9     
+	   2 Input     32 Bit        Muxes := 8     
 Module sw_interface 
 Detailed RTL Component Info : 
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 1     
+Module lights 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
 Module led_display 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -472,7 +479,7 @@ INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instan
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\u_led_display/seps_reg[1][0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\u_led_display/seps_reg[0][0] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1842.535 ; gain = 512.383 ; free physical = 3683 ; free virtual = 12790
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1842.008 ; gain = 511.867 ; free physical = 3766 ; free virtual = 13781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -502,13 +509,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'UCLK/clk_out1' to pin 'UC
 WARNING: [Synth 8-565] redefining clock 'clk_i'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1842.535 ; gain = 512.383 ; free physical = 3573 ; free virtual = 12680
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1842.008 ; gain = 511.867 ; free physical = 3611 ; free virtual = 13626
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2163.770 ; gain = 833.617 ; free physical = 3283 ; free virtual = 12390
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1876.969 ; gain = 546.828 ; free physical = 3591 ; free virtual = 13606
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -534,7 +541,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 2163.770 ; gain = 833.617 ; free physical = 3277 ; free virtual = 12384
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1876.969 ; gain = 546.828 ; free physical = 3584 ; free virtual = 13600
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -558,7 +565,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 2163.770 ; gain = 833.617 ; free physical = 3277 ; free virtual = 12385
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1876.969 ; gain = 546.828 ; free physical = 3586 ; free virtual = 13601
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -571,7 +578,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 2163.770 ; gain = 833.617 ; free physical = 3277 ; free virtual = 12385
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1876.969 ; gain = 546.828 ; free physical = 3586 ; free virtual = 13601
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -583,25 +590,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 2163.770 ; gain = 833.617 ; free physical = 3277 ; free virtual = 12385
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1876.969 ; gain = 546.828 ; free physical = 3586 ; free virtual = 13601
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 2163.770 ; gain = 833.617 ; free physical = 3277 ; free virtual = 12385
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1876.969 ; gain = 546.828 ; free physical = 3586 ; free virtual = 13601
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 2163.770 ; gain = 833.617 ; free physical = 3278 ; free virtual = 12385
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1876.969 ; gain = 546.828 ; free physical = 3586 ; free virtual = 13601
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 2163.770 ; gain = 833.617 ; free physical = 3278 ; free virtual = 12385
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1876.969 ; gain = 546.828 ; free physical = 3586 ; free virtual = 13601
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -626,54 +633,55 @@ Report Cell Usage:
 |4     |BUFG   |     1|
 |5     |CARRY4 |    33|
 |6     |LUT1   |     2|
-|7     |LUT2   |    98|
-|8     |LUT3   |   117|
-|9     |LUT4   |   139|
-|10    |LUT5   |   140|
-|11    |LUT6   |   499|
+|7     |LUT2   |   103|
+|8     |LUT3   |   123|
+|9     |LUT4   |   154|
+|10    |LUT5   |   126|
+|11    |LUT6   |   478|
 |12    |MUXF7  |     4|
 |13    |RAM32M |    12|
-|14    |FDRE   |   130|
-|15    |FDSE   |     1|
-|16    |IBUF   |     2|
-|17    |OBUF   |    16|
+|14    |FDRE   |   153|
+|15    |FDSE   |     2|
+|16    |IBUF   |    25|
+|17    |OBUF   |    40|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+----------------+------------+------+
 |      |Instance        |Module      |Cells |
 +------+----------------+------------+------+
-|1     |top             |            |  1260|
+|1     |top             |            |  1322|
 |2     |  u_led_display |led_display |   146|
-|3     |  u_rv_u        |rv_u        |  1027|
-|4     |    u_alu       |alu         |    21|
-|5     |    u_branch    |branch      |    20|
-|6     |    u_pc        |pc          |   233|
-|7     |    u_regfile   |regfile     |   753|
+|3     |  u_lights      |lights      |    24|
+|4     |  u_rv_u        |rv_u        |  1019|
+|5     |    u_alu       |alu         |    41|
+|6     |    u_branch    |branch      |    18|
+|7     |    u_pc        |pc          |   228|
+|8     |    u_regfile   |regfile     |   732|
 +------+----------------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 2163.770 ; gain = 833.617 ; free physical = 3278 ; free virtual = 12385
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1876.969 ; gain = 546.828 ; free physical = 3586 ; free virtual = 13601
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 48 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2163.770 ; gain = 450.727 ; free physical = 3340 ; free virtual = 12447
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 2163.777 ; gain = 833.617 ; free physical = 3340 ; free virtual = 12447
+Synthesis finished with 0 errors, 0 critical warnings and 25 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1876.969 ; gain = 164.453 ; free physical = 3645 ; free virtual = 13661
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1876.977 ; gain = 546.828 ; free physical = 3645 ; free virtual = 13661
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 49 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2195.785 ; gain = 0.000 ; free physical = 3290 ; free virtual = 12397
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1908.984 ; gain = 0.000 ; free physical = 3601 ; free virtual = 13617
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 12 instances were transformed.
   RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 12 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-161 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
+165 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 2195.785 ; gain = 865.766 ; free physical = 3576 ; free virtual = 12684
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2195.785 ; gain = 0.000 ; free physical = 3576 ; free virtual = 12684
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1908.984 ; gain = 578.977 ; free physical = 3664 ; free virtual = 13679
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1908.984 ; gain = 0.000 ; free physical = 3664 ; free virtual = 13679
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jun 30 16:47:05 2022...
+INFO: [Common 17-206] Exiting Vivado at Fri Jul  1 14:38:23 2022...

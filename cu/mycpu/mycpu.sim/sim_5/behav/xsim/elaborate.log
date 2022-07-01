@@ -25,7 +25,9 @@ Compiling module xil_defaultlib.rv_u
 Compiling module xil_defaultlib.aline
 Compiling module xil_defaultlib.al_interface
 Compiling module xil_defaultlib.sw_interface
+Compiling module xil_defaultlib.lg_interface
 Compiling module xil_defaultlib.switch
+Compiling module xil_defaultlib.lights
 Compiling module xil_defaultlib.led_display(TIMES=32'b010)
 Compiling module dist_mem_gen_v8_0_12.dist_mem_gen_v8_0_12(C_FAMILY="a...
 Compiling module xil_defaultlib.prgrom
