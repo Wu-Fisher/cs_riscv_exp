@@ -1,0 +1,20 @@
+0.6
+2018.3
+Dec  6 2018
+23:39:36
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.sim/sim_3/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sim_1/new/cpucon_sim.v,1656327041,verilog,,/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/npc.v,,cpucon_sim,,,../../../../mycpu.srcs/sources_1/ip/cpuclk,,,,,
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.v,1656039098,verilog,,/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/alu.v,,cpuclk,,,../../../../mycpu.srcs/sources_1/ip/cpuclk,,,,,
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v,1656039098,verilog,,/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.v,,cpuclk_clk_wiz,,,../../../../mycpu.srcs/sources_1/ip/cpuclk,,,,,
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/dram/sim/dram.v,1656040687,verilog,,/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v,,dram,,,../../../../mycpu.srcs/sources_1/ip/cpuclk,,,,,
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/prgrom/sim/prgrom.v,1656040204,verilog,,/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/dram/sim/dram.v,,prgrom,,,../../../../mycpu.srcs/sources_1/ip/cpuclk,,,,,
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/alu.v,1656216318,verilog,,/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/alu_mux.v,,alu,,,../../../../mycpu.srcs/sources_1/ip/cpuclk,,,,,
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/alu_mux.v,1656312665,verilog,,/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/branch.v,,alu_mux,,,../../../../mycpu.srcs/sources_1/ip/cpuclk,,,,,
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/branch.v,1656062970,verilog,,/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/controller.v,,branch,,,../../../../mycpu.srcs/sources_1/ip/cpuclk,,,,,
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/controller.v,1656318522,verilog,,/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sim_1/new/cpucon_sim.v,,controller,,,../../../../mycpu.srcs/sources_1/ip/cpuclk,,,,,
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/npc.v,1656312829,verilog,,/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/pc.v,,npc,,,../../../../mycpu.srcs/sources_1/ip/cpuclk,,,,,
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/pc.v,1656313105,verilog,,/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/pipline.v,,pc,,,../../../../mycpu.srcs/sources_1/ip/cpuclk,,,,,
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/pipline.v,1656234299,verilog,,/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/regfile.v,,pipline,,,../../../../mycpu.srcs/sources_1/ip/cpuclk,,,,,
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/regfile.v,1656055550,verilog,,/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/sext.v,,regfile,,,../../../../mycpu.srcs/sources_1/ip/cpuclk,,,,,
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/sext.v,1656150574,verilog,,/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/wb_mux.v,,sext,,,../../../../mycpu.srcs/sources_1/ip/cpuclk,,,,,
+/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/new/wb_mux.v,1656214394,verilog,,,,wb_mux,,,../../../../mycpu.srcs/sources_1/ip/cpuclk,,,,,

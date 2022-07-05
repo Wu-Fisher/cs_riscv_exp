@@ -1,0 +1,7 @@
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+Warning : input CLKIN1 period and attribute CLKIN1_PERIOD on PLLE2_ADV instance top_sim.u_top.UCLK.inst.plle2_adv_inst are not same.
+WARNING in top_sim.u_top.u_dram.inst at time             10030000 ns: 
+Reading from out-of-range address. Max address in top_sim.u_top.u_dram.inst is       16383
