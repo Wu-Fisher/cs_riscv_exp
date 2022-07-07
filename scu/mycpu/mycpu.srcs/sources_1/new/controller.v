@@ -7,9 +7,9 @@ module controller(
 
     output wire pcsel_o,
     output wire regwen_o,
-    output wire[1:0]wbsel_o,
-    output wire[2:0]sext_o,
-    output wire[3:0]aluop_o,
+    output wire[1:0] wbsel_o,
+    output wire[2:0] sext_o,
+    output wire[3:0] aluop_o,
     output wire asel_o,
     output wire bsel_o,
     output wire memrw_o

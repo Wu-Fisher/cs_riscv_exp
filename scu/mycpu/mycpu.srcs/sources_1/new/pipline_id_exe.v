@@ -7,7 +7,7 @@ module pipline_id_exe(
     input[31:0] rdata1_i,
     input[31:0] rdata2_i,
     input[31:0] sext_i,
-    input[31:0] raddr_i,
+    input[4:0] raddr_i,
 
     input pcsel_i,
     input regwen_i,
@@ -20,15 +20,15 @@ module pipline_id_exe(
     output [31:0] rdata1_o,
     output [31:0] rdata2_o,
     output [31:0] sext_o,
-    output [31:0] raddr_o,
+    output [4:0] raddr_o,
     output [31:0] pc_o,
     output [31:0] pc_add_o,
 
 
     output wire pcsel_o,
     output wire regwen_o,
-    output wire[1:0]wbsel_o,
-    output wire[3:0]aluop_o,
+    output wire[1:0] wbsel_o,
+    output wire[3:0] aluop_o,
     output wire asel_o,
     output wire bsel_o,
     output wire memrw_o
@@ -41,7 +41,7 @@ reg[31:0] reg_pc_add;
 reg[31:0] reg_rdata1;
 reg[31:0] reg_rdata2;
 reg[31:0] reg_sext;
-reg[31:0] reg_raddr;
+reg[4:0] reg_raddr;
 
 reg reg_pcsel;
 reg reg_regwen;

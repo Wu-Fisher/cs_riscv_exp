@@ -5,7 +5,7 @@ module pipline_exe_wb(
     input[31:0] pc_add_i,
     input [31:0] alu_result_i,
     input [31:0] dmem_data_i,
-    input [31:0] raddr_i,
+    input [4:0] raddr_i,
 
     input regwen_i,
     input[1:0] wbsel_i,
@@ -17,7 +17,7 @@ module pipline_exe_wb(
     output regwen_o,
     output[1:0] wbsel_o,
     output wire memrw_o,
-    output[31:0] raddr_o 
+    output[4:0] raddr_o 
 
 );
 
@@ -25,7 +25,7 @@ reg [31:0] reg_alu_result;
 reg [31:0] reg_dmem_data;
 reg [31:0] reg_pc_add;
 reg [1:0] reg_wbsel;
-reg [31:0] reg_raddr;
+reg [4:0] reg_raddr;
 reg reg_regwen;
 reg reg_memrw;
 
