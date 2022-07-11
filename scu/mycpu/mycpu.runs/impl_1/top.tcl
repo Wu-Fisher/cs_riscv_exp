@@ -68,16 +68,16 @@ set rc [catch {
   create_project -in_memory -part xc7a100tfgg484-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.cache/wt [current_project]
-  set_property parent.project_path /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.xpr [current_project]
-  set_property ip_output_repo /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.cache/wt [current_project]
+  set_property parent.project_path /home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.xpr [current_project]
+  set_property ip_output_repo /home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/synth_1/top.dcp
-  read_ip -quiet /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.xci
-  read_ip -quiet /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/prgrom/prgrom.xci
-  read_ip -quiet /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/dram/dram.xci
-  read_xdc /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/constris_1/pin.xdc
+  add_files -quiet /home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.runs/synth_1/top.dcp
+  read_ip -quiet /home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.xci
+  read_ip -quiet /home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/sources_1/ip/dram/dram.xci
+  read_ip -quiet /home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/sources_1/ip/prgrom/prgrom.xci
+  read_xdc /home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/constris_1/pin.xdc
   link_design -top top -part xc7a100tfgg484-1
   close_msg_db -file init_design.pb
 } RESULT]

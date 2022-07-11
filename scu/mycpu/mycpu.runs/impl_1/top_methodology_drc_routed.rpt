@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Fri Jul  1 14:40:35 2022
+| Date         : Mon Jul 11 15:28:31 2022
 | Host         : wufisher-TK running 64-bit Ubuntu 20.04.4 LTS
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -42,15 +42,15 @@ Related violations: <none>
 XDCC-1#1 Warning
 Scoped Clock constraint overwritten with the same name  
 A new clock constraint create_clock overrides a previous scoped clock constraint with the same name. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
-New: create_clock -period 10.000 [get_ports clk_i] (Source: /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/constris_1/pin.xdc (Line: 1))
-Previous: create_clock -period 10.000 [get_ports clk_i] (Source: /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.xdc (Line: 56))
+New: create_clock -period 10.000 [get_ports clk_i] (Source: /home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/constris_1/pin.xdc (Line: 1))
+Previous: create_clock -period 10.000 [get_ports clk_i] (Source: /home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.xdc (Line: 56))
 Related violations: <none>
 
 XDCC-7#1 Warning
 Scoped Clock constraint overwritten on the same source  
 A new clock constraint create_clock overrides a previous scoped clock constraint defined on the same source. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
-New: create_clock -period 10.000 [get_ports clk_i] (Source: /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/constris_1/pin.xdc (Line: 1))
-Previous: create_clock -period 10.000 [get_ports clk_i] (Source: /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.xdc (Line: 56))
+New: create_clock -period 10.000 [get_ports clk_i] (Source: /home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/constris_1/pin.xdc (Line: 1))
+Previous: create_clock -period 10.000 [get_ports clk_i] (Source: /home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.xdc (Line: 56))
 Related violations: <none>
 
 

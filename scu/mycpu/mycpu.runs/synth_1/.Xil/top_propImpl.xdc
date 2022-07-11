@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/constris_1/pin.xdc rfile:../../../mycpu.srcs/constris_1/pin.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/constris_1/pin.xdc rfile:../../../mycpu.srcs/constris_1/pin.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R1 [get_ports rst_i]
 set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]

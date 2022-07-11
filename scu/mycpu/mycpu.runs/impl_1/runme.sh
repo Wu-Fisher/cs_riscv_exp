@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/impl_1'
+HD_PWD='/home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
--- Date        : Thu Jun 30 16:46:15 2022
+-- Date        : Thu Jul  7 17:14:31 2022
 -- Host        : wufisher-TK running 64-bit Ubuntu 20.04.4 LTS
 -- Command     : write_vhdl -force -mode synth_stub
---               /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/prgrom/prgrom_stub.vhdl
+--               /home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/sources_1/ip/prgrom/prgrom_stub.vhdl
 -- Design      : prgrom
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tfgg484-1

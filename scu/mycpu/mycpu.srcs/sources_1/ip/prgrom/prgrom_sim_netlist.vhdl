@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
--- Date        : Thu Jun 30 16:46:15 2022
+-- Date        : Thu Jul  7 17:14:32 2022
 -- Host        : wufisher-TK running 64-bit Ubuntu 20.04.4 LTS
 -- Command     : write_vhdl -force -mode funcsim
---               /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/prgrom/prgrom_sim_netlist.vhdl
+--               /home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/sources_1/ip/prgrom/prgrom_sim_netlist.vhdl
 -- Design      : prgrom
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,7 +16,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity prgrom_rom is
   port (
-    spo : out STD_LOGIC_VECTOR ( 29 downto 0 );
+    spo : out STD_LOGIC_VECTOR ( 14 downto 0 );
     a : in STD_LOGIC_VECTOR ( 13 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -24,1406 +24,240 @@ entity prgrom_rom is
 end prgrom_rom;
 
 architecture STRUCTURE of prgrom_rom is
-  signal \spo[0]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[10]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[11]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[11]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[12]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[12]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[13]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[13]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[13]_INST_0_i_3_n_0\ : STD_LOGIC;
-  signal \spo[14]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[14]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[15]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[15]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[15]_INST_0_i_3_n_0\ : STD_LOGIC;
-  signal \spo[15]_INST_0_i_4_n_0\ : STD_LOGIC;
-  signal \spo[16]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[16]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[17]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[17]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[17]_INST_0_i_3_n_0\ : STD_LOGIC;
-  signal \spo[18]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[18]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[19]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[19]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[19]_INST_0_i_3_n_0\ : STD_LOGIC;
-  signal \spo[19]_INST_0_i_4_n_0\ : STD_LOGIC;
-  signal \spo[20]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[20]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[20]_INST_0_i_3_n_0\ : STD_LOGIC;
   signal \spo[21]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[21]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[22]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[22]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[22]_INST_0_i_3_n_0\ : STD_LOGIC;
-  signal \spo[23]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[23]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[24]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[24]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[25]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[25]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[25]_INST_0_i_3_n_0\ : STD_LOGIC;
-  signal \spo[25]_INST_0_i_4_n_0\ : STD_LOGIC;
-  signal \spo[25]_INST_0_i_5_n_0\ : STD_LOGIC;
-  signal \spo[26]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[26]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[26]_INST_0_i_3_n_0\ : STD_LOGIC;
-  signal \spo[27]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[27]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[28]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[28]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[29]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[29]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[29]_INST_0_i_3_n_0\ : STD_LOGIC;
-  signal \spo[29]_INST_0_i_4_n_0\ : STD_LOGIC;
-  signal \spo[2]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[30]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[30]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[30]_INST_0_i_3_n_0\ : STD_LOGIC;
-  signal \spo[30]_INST_0_i_4_n_0\ : STD_LOGIC;
-  signal \spo[3]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[3]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[4]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[4]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[5]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[5]_INST_0_i_2_n_0\ : STD_LOGIC;
   signal \spo[6]_INST_0_i_1_n_0\ : STD_LOGIC;
   signal \spo[6]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[6]_INST_0_i_3_n_0\ : STD_LOGIC;
-  signal \spo[7]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[7]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[8]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[8]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[9]_INST_0_i_1_n_0\ : STD_LOGIC;
-  signal \spo[9]_INST_0_i_2_n_0\ : STD_LOGIC;
-  signal \spo[9]_INST_0_i_3_n_0\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \spo[15]_INST_0_i_4\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \spo[25]_INST_0_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \spo[26]_INST_0_i_3\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \spo[28]_INST_0\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \spo[29]_INST_0_i_2\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \spo[2]_INST_0\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \spo[30]_INST_0_i_3\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \spo[30]_INST_0_i_4\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \spo[12]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \spo[14]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \spo[20]_INST_0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \spo[21]_INST_0\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \spo[21]_INST_0_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \spo[6]_INST_0_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \spo[8]_INST_0\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \spo[9]_INST_0\ : label is "soft_lutpair1";
 begin
-\spo[0]_INST_0\: unisim.vcomponents.LUT6
+\spo[0]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"0002000200000002"
+      INIT => X"70"
     )
         port map (
-      I0 => \spo[30]_INST_0_i_3_n_0\,
-      I1 => a(8),
-      I2 => a(7),
-      I3 => a(9),
-      I4 => a(6),
-      I5 => \spo[0]_INST_0_i_1_n_0\,
+      I0 => a(4),
+      I1 => a(3),
+      I2 => \spo[6]_INST_0_i_1_n_0\,
       O => spo(0)
-    );
-\spo[0]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00000000777F77FF"
-    )
-        port map (
-      I0 => a(3),
-      I1 => a(4),
-      I2 => a(0),
-      I3 => a(2),
-      I4 => a(1),
-      I5 => a(5),
-      O => \spo[0]_INST_0_i_1_n_0\
     );
 \spo[10]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0002000000000000"
+      INIT => X"0000400008000000"
     )
         port map (
-      I0 => \spo[11]_INST_0_i_1_n_0\,
-      I1 => a(5),
-      I2 => a(9),
-      I3 => a(10),
-      I4 => \spo[25]_INST_0_i_2_n_0\,
-      I5 => \spo[10]_INST_0_i_1_n_0\,
-      O => spo(9)
-    );
-\spo[10]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"08100C120D101C11"
-    )
-        port map (
-      I0 => a(0),
-      I1 => a(2),
+      I0 => a(2),
+      I1 => a(0),
       I2 => a(4),
-      I3 => a(6),
+      I3 => \spo[6]_INST_0_i_1_n_0\,
       I4 => a(3),
       I5 => a(1),
-      O => \spo[10]_INST_0_i_1_n_0\
-    );
-\spo[11]_INST_0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0002000000000000"
-    )
-        port map (
-      I0 => \spo[11]_INST_0_i_1_n_0\,
-      I1 => a(5),
-      I2 => a(9),
-      I3 => a(10),
-      I4 => \spo[25]_INST_0_i_2_n_0\,
-      I5 => \spo[11]_INST_0_i_2_n_0\,
-      O => spo(10)
-    );
-\spo[11]_INST_0_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"01"
-    )
-        port map (
-      I0 => a(13),
-      I1 => a(12),
-      I2 => a(11),
-      O => \spo[11]_INST_0_i_1_n_0\
-    );
-\spo[11]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0005051003CDC7CE"
-    )
-        port map (
-      I0 => a(0),
-      I1 => a(2),
-      I2 => a(6),
-      I3 => a(3),
-      I4 => a(1),
-      I5 => a(4),
-      O => \spo[11]_INST_0_i_2_n_0\
+      O => spo(6)
     );
 \spo[12]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"C0A00000"
+      INIT => X"30004000"
     )
         port map (
-      I0 => \spo[12]_INST_0_i_1_n_0\,
-      I1 => \spo[12]_INST_0_i_2_n_0\,
-      I2 => \spo[30]_INST_0_i_3_n_0\,
-      I3 => a(5),
-      I4 => \spo[30]_INST_0_i_4_n_0\,
-      O => spo(11)
-    );
-\spo[12]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0666255052111551"
-    )
-        port map (
-      I0 => a(4),
-      I1 => a(0),
-      I2 => a(2),
-      I3 => a(3),
-      I4 => a(6),
-      I5 => a(1),
-      O => \spo[12]_INST_0_i_1_n_0\
-    );
-\spo[12]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"1401104010400140"
-    )
-        port map (
-      I0 => a(6),
-      I1 => a(3),
-      I2 => a(2),
-      I3 => a(1),
-      I4 => a(4),
-      I5 => a(0),
-      O => \spo[12]_INST_0_i_2_n_0\
+      I0 => a(2),
+      I1 => a(1),
+      I2 => a(3),
+      I3 => \spo[21]_INST_0_i_1_n_0\,
+      I4 => a(0),
+      O => spo(7)
     );
 \spo[13]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A080A080A0A08080"
-    )
-        port map (
-      I0 => \spo[25]_INST_0_i_1_n_0\,
-      I1 => \spo[13]_INST_0_i_1_n_0\,
-      I2 => \spo[25]_INST_0_i_2_n_0\,
-      I3 => \spo[13]_INST_0_i_2_n_0\,
-      I4 => \spo[13]_INST_0_i_3_n_0\,
-      I5 => a(6),
-      O => spo(12)
-    );
-\spo[13]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000000000001"
+      INIT => X"020040000A000000"
     )
         port map (
       I0 => a(2),
-      I1 => a(3),
-      I2 => a(0),
-      I3 => a(1),
-      I4 => a(5),
-      I5 => a(4),
-      O => \spo[13]_INST_0_i_1_n_0\
-    );
-\spo[13]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000122800004208"
-    )
-        port map (
-      I0 => a(4),
-      I1 => a(3),
-      I2 => a(0),
-      I3 => a(2),
-      I4 => a(5),
-      I5 => a(1),
-      O => \spo[13]_INST_0_i_2_n_0\
-    );
-\spo[13]_INST_0_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"7BD65BBD00910411"
-    )
-        port map (
-      I0 => a(4),
-      I1 => a(1),
-      I2 => a(2),
-      I3 => a(0),
+      I1 => a(0),
+      I2 => a(4),
+      I3 => \spo[6]_INST_0_i_1_n_0\,
       I4 => a(3),
-      I5 => a(5),
-      O => \spo[13]_INST_0_i_3_n_0\
+      I5 => a(1),
+      O => spo(8)
     );
 \spo[14]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"C0A00000"
+      INIT => X"1000A000"
     )
         port map (
-      I0 => \spo[14]_INST_0_i_1_n_0\,
-      I1 => \spo[14]_INST_0_i_2_n_0\,
-      I2 => \spo[30]_INST_0_i_3_n_0\,
-      I3 => a(3),
-      I4 => \spo[30]_INST_0_i_4_n_0\,
-      O => spo(13)
-    );
-\spo[14]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00480064480D4101"
-    )
-        port map (
-      I0 => a(0),
-      I1 => a(1),
-      I2 => a(4),
-      I3 => a(6),
-      I4 => a(2),
-      I5 => a(5),
-      O => \spo[14]_INST_0_i_1_n_0\
-    );
-\spo[14]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0002057106850201"
-    )
-        port map (
-      I0 => a(4),
+      I0 => a(2),
       I1 => a(0),
-      I2 => a(5),
-      I3 => a(6),
+      I2 => \spo[21]_INST_0_i_1_n_0\,
+      I3 => a(3),
       I4 => a(1),
-      I5 => a(2),
-      O => \spo[14]_INST_0_i_2_n_0\
+      O => spo(9)
     );
 \spo[15]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A888AA88A8888888"
-    )
-        port map (
-      I0 => \spo[25]_INST_0_i_1_n_0\,
-      I1 => \spo[15]_INST_0_i_1_n_0\,
-      I2 => \spo[15]_INST_0_i_2_n_0\,
-      I3 => \spo[25]_INST_0_i_2_n_0\,
-      I4 => a(5),
-      I5 => \spo[15]_INST_0_i_3_n_0\,
-      O => spo(14)
-    );
-\spo[15]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0880008000800080"
-    )
-        port map (
-      I0 => \spo[15]_INST_0_i_4_n_0\,
-      I1 => \spo[25]_INST_0_i_2_n_0\,
-      I2 => a(0),
-      I3 => a(2),
-      I4 => a(3),
-      I5 => a(1),
-      O => \spo[15]_INST_0_i_1_n_0\
-    );
-\spo[15]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"003E0003009700ED"
-    )
-        port map (
-      I0 => a(3),
-      I1 => a(0),
-      I2 => a(4),
-      I3 => a(6),
-      I4 => a(2),
-      I5 => a(1),
-      O => \spo[15]_INST_0_i_2_n_0\
-    );
-\spo[15]_INST_0_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"36586052260B4063"
-    )
-        port map (
-      I0 => a(3),
-      I1 => a(4),
-      I2 => a(0),
-      I3 => a(2),
-      I4 => a(6),
-      I5 => a(1),
-      O => \spo[15]_INST_0_i_3_n_0\
-    );
-\spo[15]_INST_0_i_4\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"2"
-    )
-        port map (
-      I0 => a(4),
-      I1 => a(6),
-      O => \spo[15]_INST_0_i_4_n_0\
-    );
-\spo[16]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"CA000000"
-    )
-        port map (
-      I0 => \spo[16]_INST_0_i_1_n_0\,
-      I1 => \spo[16]_INST_0_i_2_n_0\,
-      I2 => a(6),
-      I3 => \spo[30]_INST_0_i_4_n_0\,
-      I4 => \spo[30]_INST_0_i_3_n_0\,
-      O => spo(15)
-    );
-\spo[16]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"42088C40019DC621"
-    )
-        port map (
-      I0 => a(2),
-      I1 => a(5),
-      I2 => a(0),
-      I3 => a(1),
-      I4 => a(3),
-      I5 => a(4),
-      O => \spo[16]_INST_0_i_1_n_0\
-    );
-\spo[16]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00000000765E45CB"
-    )
-        port map (
-      I0 => a(4),
-      I1 => a(3),
-      I2 => a(0),
-      I3 => a(2),
-      I4 => a(1),
-      I5 => a(5),
-      O => \spo[16]_INST_0_i_2_n_0\
-    );
-\spo[17]_INST_0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A8A88888AA888888"
-    )
-        port map (
-      I0 => \spo[25]_INST_0_i_1_n_0\,
-      I1 => \spo[17]_INST_0_i_1_n_0\,
-      I2 => \spo[17]_INST_0_i_2_n_0\,
-      I3 => \spo[17]_INST_0_i_3_n_0\,
-      I4 => \spo[25]_INST_0_i_2_n_0\,
-      I5 => a(2),
-      O => spo(16)
-    );
-\spo[17]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000002000200020"
-    )
-        port map (
-      I0 => a(4),
-      I1 => a(5),
-      I2 => \spo[25]_INST_0_i_2_n_0\,
-      I3 => a(6),
-      I4 => a(3),
-      I5 => a(0),
-      O => \spo[17]_INST_0_i_1_n_0\
-    );
-\spo[17]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000554357002000"
-    )
-        port map (
-      I0 => a(5),
-      I1 => a(6),
-      I2 => a(0),
-      I3 => a(1),
-      I4 => a(4),
-      I5 => a(3),
-      O => \spo[17]_INST_0_i_2_n_0\
-    );
-\spo[17]_INST_0_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"020E9F000F0B0F41"
-    )
-        port map (
-      I0 => a(3),
-      I1 => a(1),
-      I2 => a(5),
-      I3 => a(4),
-      I4 => a(6),
-      I5 => a(0),
-      O => \spo[17]_INST_0_i_3_n_0\
-    );
-\spo[18]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"CA000000"
-    )
-        port map (
-      I0 => \spo[18]_INST_0_i_1_n_0\,
-      I1 => \spo[18]_INST_0_i_2_n_0\,
-      I2 => a(6),
-      I3 => \spo[30]_INST_0_i_4_n_0\,
-      I4 => \spo[30]_INST_0_i_3_n_0\,
-      O => spo(17)
-    );
-\spo[18]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"799E5AB7084000C3"
+      INIT => X"040070000000E000"
     )
         port map (
       I0 => a(2),
       I1 => a(1),
-      I2 => a(0),
-      I3 => a(4),
-      I4 => a(3),
-      I5 => a(5),
-      O => \spo[18]_INST_0_i_1_n_0\
-    );
-\spo[18]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00001C1800006455"
-    )
-        port map (
-      I0 => a(0),
-      I1 => a(3),
-      I2 => a(4),
-      I3 => a(1),
-      I4 => a(5),
-      I5 => a(2),
-      O => \spo[18]_INST_0_i_2_n_0\
-    );
-\spo[19]_INST_0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A8A88888AA888888"
-    )
-        port map (
-      I0 => \spo[25]_INST_0_i_1_n_0\,
-      I1 => \spo[19]_INST_0_i_1_n_0\,
-      I2 => \spo[19]_INST_0_i_2_n_0\,
-      I3 => \spo[19]_INST_0_i_3_n_0\,
-      I4 => \spo[25]_INST_0_i_2_n_0\,
-      I5 => a(5),
-      O => spo(18)
-    );
-\spo[19]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000080000000808"
-    )
-        port map (
-      I0 => \spo[25]_INST_0_i_2_n_0\,
-      I1 => \spo[19]_INST_0_i_4_n_0\,
-      I2 => a(0),
-      I3 => a(2),
-      I4 => a(6),
-      I5 => a(4),
-      O => \spo[19]_INST_0_i_1_n_0\
-    );
-\spo[19]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000294A00000A42"
-    )
-        port map (
-      I0 => a(1),
-      I1 => a(2),
       I2 => a(3),
-      I3 => a(4),
-      I4 => a(6),
-      I5 => a(0),
-      O => \spo[19]_INST_0_i_2_n_0\
-    );
-\spo[19]_INST_0_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000898477D7FB4B"
-    )
-        port map (
-      I0 => a(6),
-      I1 => a(2),
-      I2 => a(1),
-      I3 => a(3),
+      I3 => \spo[6]_INST_0_i_1_n_0\,
       I4 => a(4),
       I5 => a(0),
-      O => \spo[19]_INST_0_i_3_n_0\
+      O => spo(10)
     );
-\spo[19]_INST_0_i_4\: unisim.vcomponents.LUT2
+\spo[20]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"2"
-    )
-        port map (
-      I0 => a(3),
-      I1 => a(1),
-      O => \spo[19]_INST_0_i_4_n_0\
-    );
-\spo[20]_INST_0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A0A0A0A0A0802000"
-    )
-        port map (
-      I0 => \spo[25]_INST_0_i_1_n_0\,
-      I1 => a(6),
-      I2 => \spo[25]_INST_0_i_2_n_0\,
-      I3 => \spo[20]_INST_0_i_1_n_0\,
-      I4 => \spo[20]_INST_0_i_2_n_0\,
-      I5 => \spo[20]_INST_0_i_3_n_0\,
-      O => spo(19)
-    );
-\spo[20]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"351854DFDA71F255"
-    )
-        port map (
-      I0 => a(5),
-      I1 => a(2),
-      I2 => a(4),
-      I3 => a(1),
-      I4 => a(0),
-      I5 => a(3),
-      O => \spo[20]_INST_0_i_1_n_0\
-    );
-\spo[20]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0004000014445000"
-    )
-        port map (
-      I0 => a(5),
-      I1 => a(3),
-      I2 => a(2),
-      I3 => a(1),
-      I4 => a(0),
-      I5 => a(4),
-      O => \spo[20]_INST_0_i_2_n_0\
-    );
-\spo[20]_INST_0_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00000000050D0001"
+      INIT => X"1000C200"
     )
         port map (
       I0 => a(2),
       I1 => a(1),
-      I2 => a(5),
-      I3 => a(3),
-      I4 => a(4),
-      I5 => a(0),
-      O => \spo[20]_INST_0_i_3_n_0\
+      I2 => a(3),
+      I3 => \spo[21]_INST_0_i_1_n_0\,
+      I4 => a(0),
+      O => spo(11)
     );
 \spo[21]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"C0A00000"
-    )
-        port map (
-      I0 => \spo[21]_INST_0_i_1_n_0\,
-      I1 => \spo[21]_INST_0_i_2_n_0\,
-      I2 => \spo[30]_INST_0_i_3_n_0\,
-      I3 => a(5),
-      I4 => \spo[30]_INST_0_i_4_n_0\,
-      O => spo(20)
-    );
-\spo[21]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"108742C80001000F"
+      INIT => X"74002000"
     )
         port map (
       I0 => a(2),
-      I1 => a(3),
-      I2 => a(0),
-      I3 => a(4),
-      I4 => a(1),
-      I5 => a(6),
-      O => \spo[21]_INST_0_i_1_n_0\
-    );
-\spo[21]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"002B00D400FD002A"
-    )
-        port map (
-      I0 => a(2),
-      I1 => a(0),
-      I2 => a(4),
-      I3 => a(6),
-      I4 => a(3),
-      I5 => a(1),
-      O => \spo[21]_INST_0_i_2_n_0\
-    );
-\spo[22]_INST_0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AAAAAAAAA0802000"
-    )
-        port map (
-      I0 => \spo[25]_INST_0_i_1_n_0\,
       I1 => a(1),
-      I2 => \spo[25]_INST_0_i_2_n_0\,
-      I3 => \spo[22]_INST_0_i_1_n_0\,
-      I4 => \spo[22]_INST_0_i_2_n_0\,
-      I5 => \spo[22]_INST_0_i_3_n_0\,
-      O => spo(21)
-    );
-\spo[22]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"091507450EA50015"
-    )
-        port map (
-      I0 => a(0),
-      I1 => a(4),
-      I2 => a(6),
-      I3 => a(5),
-      I4 => a(3),
-      I5 => a(2),
-      O => \spo[22]_INST_0_i_1_n_0\
-    );
-\spo[22]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"01080C0B50824CC8"
-    )
-        port map (
-      I0 => a(3),
-      I1 => a(2),
-      I2 => a(6),
-      I3 => a(4),
+      I2 => a(3),
+      I3 => \spo[21]_INST_0_i_1_n_0\,
       I4 => a(0),
-      I5 => a(5),
-      O => \spo[22]_INST_0_i_2_n_0\
+      O => spo(12)
     );
-\spo[22]_INST_0_i_3\: unisim.vcomponents.LUT6
+\spo[21]_INST_0_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0000000000000010"
-    )
-        port map (
-      I0 => a(5),
-      I1 => a(6),
-      I2 => a(4),
-      I3 => a(0),
-      I4 => a(8),
-      I5 => a(7),
-      O => \spo[22]_INST_0_i_3_n_0\
-    );
-\spo[23]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"C0A00000"
-    )
-        port map (
-      I0 => \spo[23]_INST_0_i_1_n_0\,
-      I1 => \spo[23]_INST_0_i_2_n_0\,
-      I2 => \spo[30]_INST_0_i_3_n_0\,
-      I3 => a(5),
-      I4 => \spo[30]_INST_0_i_4_n_0\,
-      O => spo(22)
-    );
-\spo[23]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"200240340859003D"
-    )
-        port map (
-      I0 => a(1),
-      I1 => a(3),
-      I2 => a(2),
-      I3 => a(4),
-      I4 => a(6),
-      I5 => a(0),
-      O => \spo[23]_INST_0_i_1_n_0\
-    );
-\spo[23]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0001000000000200"
-    )
-        port map (
-      I0 => a(4),
-      I1 => a(6),
-      I2 => a(1),
-      I3 => a(0),
-      I4 => a(3),
-      I5 => a(2),
-      O => \spo[23]_INST_0_i_2_n_0\
-    );
-\spo[24]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"CA000000"
-    )
-        port map (
-      I0 => \spo[24]_INST_0_i_1_n_0\,
-      I1 => \spo[24]_INST_0_i_2_n_0\,
-      I2 => a(6),
-      I3 => \spo[30]_INST_0_i_4_n_0\,
-      I4 => \spo[30]_INST_0_i_3_n_0\,
-      O => spo(23)
-    );
-\spo[24]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0411089B8AB40045"
-    )
-        port map (
-      I0 => a(5),
-      I1 => a(2),
-      I2 => a(0),
-      I3 => a(4),
-      I4 => a(1),
-      I5 => a(3),
-      O => \spo[24]_INST_0_i_1_n_0\
-    );
-\spo[24]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00260000008D0008"
-    )
-        port map (
-      I0 => a(2),
-      I1 => a(3),
-      I2 => a(0),
-      I3 => a(5),
-      I4 => a(1),
-      I5 => a(4),
-      O => \spo[24]_INST_0_i_2_n_0\
-    );
-\spo[25]_INST_0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A0A0A020A0A08000"
-    )
-        port map (
-      I0 => \spo[25]_INST_0_i_1_n_0\,
-      I1 => a(3),
-      I2 => \spo[25]_INST_0_i_2_n_0\,
-      I3 => \spo[25]_INST_0_i_3_n_0\,
-      I4 => \spo[25]_INST_0_i_4_n_0\,
-      I5 => \spo[25]_INST_0_i_5_n_0\,
-      O => spo(24)
-    );
-\spo[25]_INST_0_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000001"
-    )
-        port map (
-      I0 => a(10),
-      I1 => a(9),
-      I2 => a(11),
-      I3 => a(12),
-      I4 => a(13),
-      O => \spo[25]_INST_0_i_1_n_0\
-    );
-\spo[25]_INST_0_i_2\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => a(7),
-      I1 => a(8),
-      O => \spo[25]_INST_0_i_2_n_0\
-    );
-\spo[25]_INST_0_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"00400A2001110241"
-    )
-        port map (
-      I0 => a(1),
-      I1 => a(0),
-      I2 => a(5),
-      I3 => a(6),
-      I4 => a(4),
-      I5 => a(2),
-      O => \spo[25]_INST_0_i_3_n_0\
-    );
-\spo[25]_INST_0_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000008000000000"
-    )
-        port map (
-      I0 => a(0),
-      I1 => a(1),
-      I2 => a(5),
-      I3 => a(6),
-      I4 => a(2),
-      I5 => a(4),
-      O => \spo[25]_INST_0_i_4_n_0\
-    );
-\spo[25]_INST_0_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"044500910A000019"
-    )
-        port map (
-      I0 => a(0),
-      I1 => a(1),
-      I2 => a(5),
-      I3 => a(6),
-      I4 => a(4),
-      I5 => a(2),
-      O => \spo[25]_INST_0_i_5_n_0\
-    );
-\spo[26]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"AAAA2000"
-    )
-        port map (
-      I0 => \spo[30]_INST_0_i_3_n_0\,
-      I1 => a(6),
-      I2 => \spo[30]_INST_0_i_4_n_0\,
-      I3 => \spo[26]_INST_0_i_1_n_0\,
-      I4 => \spo[26]_INST_0_i_2_n_0\,
-      O => spo(25)
-    );
-\spo[26]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"10904120052788D7"
-    )
-        port map (
-      I0 => a(3),
-      I1 => a(2),
-      I2 => a(5),
-      I3 => a(1),
-      I4 => a(4),
-      I5 => a(0),
-      O => \spo[26]_INST_0_i_1_n_0\
-    );
-\spo[26]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0600000000000000"
-    )
-        port map (
-      I0 => a(0),
-      I1 => a(3),
-      I2 => a(2),
-      I3 => \spo[26]_INST_0_i_3_n_0\,
-      I4 => \spo[30]_INST_0_i_4_n_0\,
-      I5 => a(6),
-      O => \spo[26]_INST_0_i_2_n_0\
-    );
-\spo[26]_INST_0_i_3\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"2"
-    )
-        port map (
-      I0 => a(4),
-      I1 => a(5),
-      O => \spo[26]_INST_0_i_3_n_0\
-    );
-\spo[27]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"CA000000"
-    )
-        port map (
-      I0 => \spo[27]_INST_0_i_1_n_0\,
-      I1 => \spo[27]_INST_0_i_2_n_0\,
-      I2 => a(6),
-      I3 => \spo[30]_INST_0_i_4_n_0\,
-      I4 => \spo[30]_INST_0_i_3_n_0\,
-      O => spo(26)
-    );
-\spo[27]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0400040104100101"
-    )
-        port map (
-      I0 => a(0),
-      I1 => a(4),
-      I2 => a(5),
-      I3 => a(3),
-      I4 => a(1),
-      I5 => a(2),
-      O => \spo[27]_INST_0_i_1_n_0\
-    );
-\spo[27]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0005014000000000"
-    )
-        port map (
-      I0 => a(5),
-      I1 => a(1),
-      I2 => a(2),
-      I3 => a(0),
-      I4 => a(3),
-      I5 => a(4),
-      O => \spo[27]_INST_0_i_2_n_0\
-    );
-\spo[28]_INST_0\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFE0"
-    )
-        port map (
-      I0 => \spo[28]_INST_0_i_1_n_0\,
-      I1 => \spo[28]_INST_0_i_2_n_0\,
-      I2 => \spo[29]_INST_0_i_2_n_0\,
-      I3 => \spo[29]_INST_0_i_3_n_0\,
-      O => spo(27)
-    );
-\spo[28]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0030000000800000"
-    )
-        port map (
-      I0 => a(1),
-      I1 => a(2),
-      I2 => a(3),
-      I3 => a(0),
-      I4 => a(4),
-      I5 => a(6),
-      O => \spo[28]_INST_0_i_1_n_0\
-    );
-\spo[28]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000800000003"
-    )
-        port map (
-      I0 => a(6),
-      I1 => a(4),
-      I2 => a(1),
-      I3 => a(3),
-      I4 => a(2),
-      I5 => a(0),
-      O => \spo[28]_INST_0_i_2_n_0\
-    );
-\spo[29]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"F8"
-    )
-        port map (
-      I0 => \spo[29]_INST_0_i_1_n_0\,
-      I1 => \spo[29]_INST_0_i_2_n_0\,
-      I2 => \spo[29]_INST_0_i_3_n_0\,
-      O => spo(29)
-    );
-\spo[29]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"1210204000000011"
-    )
-        port map (
-      I0 => a(2),
-      I1 => a(0),
-      I2 => a(6),
-      I3 => a(1),
-      I4 => a(3),
-      I5 => a(4),
-      O => \spo[29]_INST_0_i_1_n_0\
-    );
-\spo[29]_INST_0_i_2\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"00000002"
-    )
-        port map (
-      I0 => \spo[30]_INST_0_i_3_n_0\,
-      I1 => a(5),
-      I2 => a(9),
-      I3 => a(8),
-      I4 => a(7),
-      O => \spo[29]_INST_0_i_2_n_0\
-    );
-\spo[29]_INST_0_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000800000000"
-    )
-        port map (
-      I0 => \spo[30]_INST_0_i_3_n_0\,
-      I1 => \spo[29]_INST_0_i_4_n_0\,
-      I2 => a(7),
-      I3 => a(8),
-      I4 => a(9),
-      I5 => a(5),
-      O => \spo[29]_INST_0_i_3_n_0\
-    );
-\spo[29]_INST_0_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000048200001804"
-    )
-        port map (
-      I0 => a(0),
-      I1 => a(1),
-      I2 => a(3),
-      I3 => a(2),
-      I4 => a(6),
-      I5 => a(4),
-      O => \spo[29]_INST_0_i_4_n_0\
-    );
-\spo[2]_INST_0\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"F8"
-    )
-        port map (
-      I0 => \spo[2]_INST_0_i_1_n_0\,
-      I1 => \spo[29]_INST_0_i_2_n_0\,
-      I2 => \spo[29]_INST_0_i_3_n_0\,
-      O => spo(1)
-    );
-\spo[2]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"1410000140800001"
-    )
-        port map (
-      I0 => a(0),
-      I1 => a(2),
-      I2 => a(3),
-      I3 => a(1),
-      I4 => a(4),
-      I5 => a(6),
-      O => \spo[2]_INST_0_i_1_n_0\
-    );
-\spo[30]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"C0A00000"
-    )
-        port map (
-      I0 => \spo[30]_INST_0_i_1_n_0\,
-      I1 => \spo[30]_INST_0_i_2_n_0\,
-      I2 => \spo[30]_INST_0_i_3_n_0\,
-      I3 => a(3),
-      I4 => \spo[30]_INST_0_i_4_n_0\,
-      O => spo(28)
-    );
-\spo[30]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"000010A318820809"
-    )
-        port map (
-      I0 => a(1),
-      I1 => a(2),
-      I2 => a(4),
-      I3 => a(0),
-      I4 => a(5),
-      I5 => a(6),
-      O => \spo[30]_INST_0_i_1_n_0\
-    );
-\spo[30]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0020030100502498"
-    )
-        port map (
-      I0 => a(4),
-      I1 => a(6),
-      I2 => a(1),
-      I3 => a(2),
-      I4 => a(0),
-      I5 => a(5),
-      O => \spo[30]_INST_0_i_2_n_0\
-    );
-\spo[30]_INST_0_i_3\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"0001"
+      INIT => X"00000010"
     )
         port map (
       I0 => a(11),
-      I1 => a(12),
-      I2 => a(13),
+      I1 => a(9),
+      I2 => \spo[6]_INST_0_i_2_n_0\,
       I3 => a(10),
-      O => \spo[30]_INST_0_i_3_n_0\
-    );
-\spo[30]_INST_0_i_4\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"01"
-    )
-        port map (
-      I0 => a(9),
-      I1 => a(8),
-      I2 => a(7),
-      O => \spo[30]_INST_0_i_4_n_0\
-    );
-\spo[3]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"CA000000"
-    )
-        port map (
-      I0 => \spo[3]_INST_0_i_1_n_0\,
-      I1 => \spo[3]_INST_0_i_2_n_0\,
-      I2 => a(6),
-      I3 => \spo[30]_INST_0_i_4_n_0\,
-      I4 => \spo[30]_INST_0_i_3_n_0\,
-      O => spo(2)
-    );
-\spo[3]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0482180460000000"
-    )
-        port map (
-      I0 => a(0),
-      I1 => a(1),
-      I2 => a(3),
-      I3 => a(2),
       I4 => a(4),
-      I5 => a(5),
-      O => \spo[3]_INST_0_i_1_n_0\
+      O => \spo[21]_INST_0_i_1_n_0\
     );
-\spo[3]_INST_0_i_2\: unisim.vcomponents.LUT6
+\spo[30]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000000000400089"
-    )
-        port map (
-      I0 => a(3),
-      I1 => a(4),
-      I2 => a(1),
-      I3 => a(5),
-      I4 => a(2),
-      I5 => a(0),
-      O => \spo[3]_INST_0_i_2_n_0\
-    );
-\spo[4]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"C0A00000"
-    )
-        port map (
-      I0 => \spo[4]_INST_0_i_1_n_0\,
-      I1 => \spo[4]_INST_0_i_2_n_0\,
-      I2 => \spo[30]_INST_0_i_3_n_0\,
-      I3 => a(4),
-      I4 => \spo[30]_INST_0_i_4_n_0\,
-      O => spo(3)
-    );
-\spo[4]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"02062BFD0900EFEF"
+      INIT => X"0000300004000000"
     )
         port map (
       I0 => a(0),
       I1 => a(2),
-      I2 => a(6),
-      I3 => a(3),
-      I4 => a(5),
-      I5 => a(1),
-      O => \spo[4]_INST_0_i_1_n_0\
-    );
-\spo[4]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"000209099A429A9A"
-    )
-        port map (
-      I0 => a(0),
-      I1 => a(2),
-      I2 => a(5),
-      I3 => a(1),
-      I4 => a(3),
-      I5 => a(6),
-      O => \spo[4]_INST_0_i_2_n_0\
-    );
-\spo[5]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"CA000000"
-    )
-        port map (
-      I0 => \spo[5]_INST_0_i_1_n_0\,
-      I1 => \spo[5]_INST_0_i_2_n_0\,
-      I2 => a(6),
-      I3 => \spo[30]_INST_0_i_4_n_0\,
-      I4 => \spo[30]_INST_0_i_3_n_0\,
-      O => spo(4)
-    );
-\spo[5]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"EAAAFAAAFEEEEEEF"
-    )
-        port map (
-      I0 => a(5),
-      I1 => a(4),
       I2 => a(3),
-      I3 => a(2),
-      I4 => a(1),
-      I5 => a(0),
-      O => \spo[5]_INST_0_i_1_n_0\
-    );
-\spo[5]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"1140150414451445"
-    )
-        port map (
-      I0 => a(5),
-      I1 => a(3),
-      I2 => a(2),
-      I3 => a(4),
-      I4 => a(1),
-      I5 => a(0),
-      O => \spo[5]_INST_0_i_2_n_0\
-    );
-\spo[6]_INST_0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"A0A0A0A0A0802000"
-    )
-        port map (
-      I0 => \spo[25]_INST_0_i_1_n_0\,
-      I1 => a(5),
-      I2 => \spo[25]_INST_0_i_2_n_0\,
       I3 => \spo[6]_INST_0_i_1_n_0\,
-      I4 => \spo[6]_INST_0_i_2_n_0\,
-      I5 => \spo[6]_INST_0_i_3_n_0\,
-      O => spo(5)
+      I4 => a(4),
+      I5 => a(1),
+      O => spo(13)
     );
-\spo[6]_INST_0_i_1\: unisim.vcomponents.LUT6
+\spo[4]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"001880006F4FC850"
+      INIT => X"00DFBDFF00000000"
     )
         port map (
       I0 => a(2),
+      I1 => a(0),
+      I2 => a(1),
+      I3 => a(4),
+      I4 => a(3),
+      I5 => \spo[6]_INST_0_i_1_n_0\,
+      O => spo(1)
+    );
+\spo[5]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00EBBFBD00000000"
+    )
+        port map (
+      I0 => a(2),
+      I1 => a(1),
+      I2 => a(0),
+      I3 => a(4),
+      I4 => a(3),
+      I5 => \spo[6]_INST_0_i_1_n_0\,
+      O => spo(2)
+    );
+\spo[6]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000100000000000"
+    )
+        port map (
+      I0 => a(1),
       I1 => a(3),
-      I2 => a(6),
-      I3 => a(1),
-      I4 => a(4),
-      I5 => a(0),
+      I2 => \spo[6]_INST_0_i_1_n_0\,
+      I3 => a(4),
+      I4 => a(0),
+      I5 => a(2),
+      O => spo(14)
+    );
+\spo[6]_INST_0_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0004"
+    )
+        port map (
+      I0 => a(10),
+      I1 => \spo[6]_INST_0_i_2_n_0\,
+      I2 => a(9),
+      I3 => a(11),
       O => \spo[6]_INST_0_i_1_n_0\
     );
 \spo[6]_INST_0_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"0000401000002108"
+      INIT => X"0000000000000001"
+    )
+        port map (
+      I0 => a(7),
+      I1 => a(5),
+      I2 => a(12),
+      I3 => a(13),
+      I4 => a(6),
+      I5 => a(8),
+      O => \spo[6]_INST_0_i_2_n_0\
+    );
+\spo[7]_INST_0\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0400140002002000"
     )
         port map (
       I0 => a(2),
-      I1 => a(3),
-      I2 => a(0),
-      I3 => a(1),
-      I4 => a(6),
-      I5 => a(4),
-      O => \spo[6]_INST_0_i_2_n_0\
-    );
-\spo[6]_INST_0_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000002000000000"
-    )
-        port map (
-      I0 => a(1),
-      I1 => a(0),
-      I2 => a(2),
-      I3 => a(3),
-      I4 => a(6),
-      I5 => a(4),
-      O => \spo[6]_INST_0_i_3_n_0\
-    );
-\spo[7]_INST_0\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"C0A00000"
-    )
-        port map (
-      I0 => \spo[7]_INST_0_i_1_n_0\,
-      I1 => \spo[7]_INST_0_i_2_n_0\,
-      I2 => \spo[30]_INST_0_i_3_n_0\,
-      I3 => a(4),
-      I4 => \spo[30]_INST_0_i_4_n_0\,
-      O => spo(6)
-    );
-\spo[7]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0450464005009055"
-    )
-        port map (
-      I0 => a(5),
-      I1 => a(0),
+      I1 => a(1),
       I2 => a(3),
-      I3 => a(1),
-      I4 => a(6),
-      I5 => a(2),
-      O => \spo[7]_INST_0_i_1_n_0\
-    );
-\spo[7]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"000082410050B0F0"
-    )
-        port map (
-      I0 => a(1),
-      I1 => a(2),
-      I2 => a(0),
-      I3 => a(3),
-      I4 => a(6),
-      I5 => a(5),
-      O => \spo[7]_INST_0_i_2_n_0\
+      I3 => \spo[6]_INST_0_i_1_n_0\,
+      I4 => a(4),
+      I5 => a(0),
+      O => spo(3)
     );
 \spo[8]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"CA000000"
-    )
-        port map (
-      I0 => \spo[8]_INST_0_i_1_n_0\,
-      I1 => \spo[8]_INST_0_i_2_n_0\,
-      I2 => a(6),
-      I3 => \spo[30]_INST_0_i_4_n_0\,
-      I4 => \spo[30]_INST_0_i_3_n_0\,
-      O => spo(7)
-    );
-\spo[8]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0290094001221132"
-    )
-        port map (
-      I0 => a(2),
-      I1 => a(4),
-      I2 => a(1),
-      I3 => a(3),
-      I4 => a(0),
-      I5 => a(5),
-      O => \spo[8]_INST_0_i_1_n_0\
-    );
-\spo[8]_INST_0_i_2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0410115501010540"
-    )
-        port map (
-      I0 => a(5),
-      I1 => a(2),
-      I2 => a(3),
-      I3 => a(1),
-      I4 => a(4),
-      I5 => a(0),
-      O => \spo[8]_INST_0_i_2_n_0\
-    );
-\spo[9]_INST_0\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AAAAAAAA8800A000"
-    )
-        port map (
-      I0 => \spo[25]_INST_0_i_1_n_0\,
-      I1 => \spo[9]_INST_0_i_1_n_0\,
-      I2 => \spo[9]_INST_0_i_2_n_0\,
-      I3 => \spo[25]_INST_0_i_2_n_0\,
-      I4 => a(2),
-      I5 => \spo[9]_INST_0_i_3_n_0\,
-      O => spo(8)
-    );
-\spo[9]_INST_0_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"001F9CBC00314270"
+      INIT => X"30004400"
     )
         port map (
       I0 => a(1),
-      I1 => a(4),
+      I1 => a(2),
       I2 => a(3),
-      I3 => a(5),
-      I4 => a(6),
-      I5 => a(0),
-      O => \spo[9]_INST_0_i_1_n_0\
+      I3 => \spo[21]_INST_0_i_1_n_0\,
+      I4 => a(0),
+      O => spo(4)
     );
-\spo[9]_INST_0_i_2\: unisim.vcomponents.LUT6
+\spo[9]_INST_0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"014545446646C924"
+      INIT => X"30004000"
     )
         port map (
-      I0 => a(5),
-      I1 => a(0),
+      I0 => a(0),
+      I1 => a(2),
       I2 => a(3),
-      I3 => a(1),
-      I4 => a(4),
-      I5 => a(6),
-      O => \spo[9]_INST_0_i_2_n_0\
-    );
-\spo[9]_INST_0_i_3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"0000000200000800"
-    )
-        port map (
-      I0 => \spo[25]_INST_0_i_2_n_0\,
-      I1 => a(0),
-      I2 => a(5),
-      I3 => a(6),
+      I3 => \spo[21]_INST_0_i_1_n_0\,
       I4 => a(1),
-      I5 => a(4),
-      O => \spo[9]_INST_0_i_3_n_0\
+      O => spo(5)
     );
 end STRUCTURE;
 library IEEE;
@@ -1432,7 +266,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity prgrom_dist_mem_gen_v8_0_12_synth is
   port (
-    spo : out STD_LOGIC_VECTOR ( 29 downto 0 );
+    spo : out STD_LOGIC_VECTOR ( 14 downto 0 );
     a : in STD_LOGIC_VECTOR ( 13 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -1444,7 +278,7 @@ begin
 \gen_rom.rom_inst\: entity work.prgrom_rom
      port map (
       a(13 downto 0) => a(13 downto 0),
-      spo(29 downto 0) => spo(29 downto 0)
+      spo(14 downto 0) => spo(14 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -1641,7 +475,26 @@ begin
   qspo(0) <= \<const0>\;
   spo(31 downto 30) <= \^spo\(31 downto 30);
   spo(29) <= \^spo\(31);
-  spo(28 downto 1) <= \^spo\(28 downto 1);
+  spo(28) <= \^spo\(31);
+  spo(27) <= \^spo\(31);
+  spo(26) <= \<const0>\;
+  spo(25) <= \^spo\(31);
+  spo(24) <= \<const0>\;
+  spo(23) <= \<const0>\;
+  spo(22) <= \<const0>\;
+  spo(21 downto 20) <= \^spo\(21 downto 20);
+  spo(19) <= \<const0>\;
+  spo(18) <= \<const0>\;
+  spo(17) <= \<const0>\;
+  spo(16) <= \<const0>\;
+  spo(15 downto 12) <= \^spo\(15 downto 12);
+  spo(11) <= \^spo\(31);
+  spo(10 downto 7) <= \^spo\(10 downto 7);
+  spo(6) <= \^spo\(31);
+  spo(5 downto 4) <= \^spo\(5 downto 4);
+  spo(3) <= \<const0>\;
+  spo(2) <= \<const0>\;
+  spo(1) <= \^spo\(1);
   spo(0) <= \^spo\(1);
 GND: unisim.vcomponents.GND
      port map (
@@ -1650,8 +503,12 @@ GND: unisim.vcomponents.GND
 \synth_options.dist_mem_inst\: entity work.prgrom_dist_mem_gen_v8_0_12_synth
      port map (
       a(13 downto 0) => a(13 downto 0),
-      spo(29 downto 28) => \^spo\(31 downto 30),
-      spo(27 downto 0) => \^spo\(28 downto 1)
+      spo(14 downto 13) => \^spo\(31 downto 30),
+      spo(12 downto 11) => \^spo\(21 downto 20),
+      spo(10 downto 7) => \^spo\(15 downto 12),
+      spo(6 downto 3) => \^spo\(10 downto 7),
+      spo(2 downto 1) => \^spo\(5 downto 4),
+      spo(0) => \^spo\(1)
     );
 end STRUCTURE;
 library IEEE;

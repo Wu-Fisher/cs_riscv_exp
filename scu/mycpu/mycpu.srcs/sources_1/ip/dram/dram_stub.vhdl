@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
--- Date        : Thu Jun 30 09:02:33 2022
+-- Date        : Thu Jun 30 09:02:31 2022
 -- Host        : wufisher-TK running 64-bit Ubuntu 20.04.4 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/dram/dram_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top dram -prefix
+--               dram_ dram_stub.vhdl
 -- Design      : dram
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tfgg484-1

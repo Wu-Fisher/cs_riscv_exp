@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="dram_synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1656550607">
-  <File Type="RDS-UTIL" Name="dram_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="dram_utilization_synth.pb"/>
-  <File Type="RDS-RDS" Name="dram.vds"/>
-  <File Type="RDS-DCP" Name="dram.dcp"/>
-  <File Type="PA-TCL" Name="dram.tcl"/>
+<GenRun Id="dram_synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1657181948">
   <File Type="REPORTS-TCL" Name="dram_reports.tcl"/>
+  <File Type="PA-TCL" Name="dram.tcl"/>
+  <File Type="RDS-DCP" Name="dram.dcp"/>
+  <File Type="RDS-RDS" Name="dram.vds"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/dram">
     <File Path="$PSRCDIR/sources_1/ip/dram/dram.xci">
       <FileInfo>

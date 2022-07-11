@@ -2,12 +2,12 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Fri Jun 24 10:51:40 2022
-# Process ID: 49771
-# Current directory: /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/cpuclk_synth_1
+# Start of session at: Mon Jul 11 15:20:30 2022
+# Process ID: 3958
+# Current directory: /home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.runs/cpuclk_synth_1
 # Command line: vivado -log cpuclk.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpuclk.tcl
-# Log file: /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/cpuclk_synth_1/cpuclk.vds
-# Journal file: /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/cpuclk_synth_1/vivado.jou
+# Log file: /home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.runs/cpuclk_synth_1/cpuclk.vds
+# Journal file: /home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.runs/cpuclk_synth_1/vivado.jou
 #-----------------------------------------------------------
 source cpuclk.tcl -notrace
 Command: synth_design -top cpuclk -part xc7a100tfgg484-1 -mode out_of_context
@@ -15,12 +15,12 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 49804 
+INFO: Helper process launched with PID 4065 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1417.016 ; gain = 86.871 ; free physical = 654 ; free virtual = 13701
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1417.277 ; gain = 60.867 ; free physical = 10272 ; free virtual = 14427
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'cpuclk' [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.v:70]
-INFO: [Synth 8-6157] synthesizing module 'cpuclk_clk_wiz' [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v:68]
+INFO: [Synth 8-6157] synthesizing module 'cpuclk' [/home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.v:70]
+INFO: [Synth 8-6157] synthesizing module 'cpuclk_clk_wiz' [/home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v:68]
 INFO: [Synth 8-6157] synthesizing module 'IBUF' [/home/wufisher/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20408]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
@@ -30,11 +30,11 @@ INFO: [Synth 8-6157] synthesizing module 'IBUF' [/home/wufisher/Xilinx/Vivado/20
 INFO: [Synth 8-6155] done synthesizing module 'IBUF' (1#1) [/home/wufisher/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:20408]
 INFO: [Synth 8-6157] synthesizing module 'PLLE2_ADV' [/home/wufisher/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:41045]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
-	Parameter CLKFBOUT_MULT bound to: 33 - type: integer 
+	Parameter CLKFBOUT_MULT bound to: 17 - type: integer 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
 	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
-	Parameter CLKOUT0_DIVIDE bound to: 33 - type: integer 
+	Parameter CLKOUT0_DIVIDE bound to: 17 - type: integer 
 	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
@@ -53,7 +53,7 @@ INFO: [Synth 8-6157] synthesizing module 'PLLE2_ADV' [/home/wufisher/Xilinx/Viva
 	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
 	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
 	Parameter COMPENSATION bound to: ZHOLD - type: string 
-	Parameter DIVCLK_DIVIDE bound to: 4 - type: integer 
+	Parameter DIVCLK_DIVIDE bound to: 2 - type: integer 
 	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
 	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
 	Parameter IS_RST_INVERTED bound to: 1'b0 
@@ -63,10 +63,10 @@ INFO: [Synth 8-6157] synthesizing module 'PLLE2_ADV' [/home/wufisher/Xilinx/Viva
 INFO: [Synth 8-6155] done synthesizing module 'PLLE2_ADV' (2#1) [/home/wufisher/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:41045]
 INFO: [Synth 8-6157] synthesizing module 'BUFG' [/home/wufisher/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:609]
 INFO: [Synth 8-6155] done synthesizing module 'BUFG' (3#1) [/home/wufisher/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:609]
-INFO: [Synth 8-6155] done synthesizing module 'cpuclk_clk_wiz' (4#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'cpuclk' (5#1) [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'cpuclk_clk_wiz' (4#1) [/home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'cpuclk' (5#1) [/home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.v:70]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1462.766 ; gain = 132.621 ; free physical = 650 ; free virtual = 13698
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1463.027 ; gain = 106.617 ; free physical = 10276 ; free virtual = 14433
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -79,10 +79,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1462.766 ; gain = 132.621 ; free physical = 651 ; free virtual = 13699
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1463.027 ; gain = 106.617 ; free physical = 10277 ; free virtual = 14434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1462.766 ; gain = 132.621 ; free physical = 651 ; free virtual = 13699
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1463.027 ; gain = 106.617 ; free physical = 10277 ; free virtual = 14434
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -91,45 +91,45 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk_ooc.xdc] for cell 'inst'
-Parsing XDC File [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk_board.xdc] for cell 'inst'
-Finished Parsing XDC File [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk_board.xdc] for cell 'inst'
-Parsing XDC File [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.xdc] for cell 'inst'
-Finished Parsing XDC File [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.xdc] for cell 'inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cpuclk_propImpl.xdc].
+Parsing XDC File [/home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk_board.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk_board.xdc] for cell 'inst'
+Parsing XDC File [/home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.srcs/sources_1/ip/cpuclk/cpuclk.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cpuclk_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/cpuclk_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1743.633 ; gain = 0.000 ; free physical = 380 ; free virtual = 13446
-Parsing XDC File [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/cpuclk_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/cpuclk_synth_1/dont_touch.xdc]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1742.887 ; gain = 0.000 ; free physical = 10024 ; free virtual = 14180
+Parsing XDC File [/home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.runs/cpuclk_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.runs/cpuclk_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1743.633 ; gain = 0.000 ; free physical = 380 ; free virtual = 13446
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1742.887 ; gain = 0.000 ; free physical = 10024 ; free virtual = 14180
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1743.633 ; gain = 0.000 ; free physical = 380 ; free virtual = 13446
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1743.633 ; gain = 0.000 ; free physical = 380 ; free virtual = 13446
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1742.887 ; gain = 0.000 ; free physical = 10024 ; free virtual = 14180
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1742.887 ; gain = 0.000 ; free physical = 10024 ; free virtual = 14180
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1743.633 ; gain = 413.488 ; free physical = 462 ; free virtual = 13529
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1742.887 ; gain = 386.477 ; free physical = 10092 ; free virtual = 14249
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1743.633 ; gain = 413.488 ; free physical = 462 ; free virtual = 13529
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1742.887 ; gain = 386.477 ; free physical = 10092 ; free virtual = 14249
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/cpuclk_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.runs/cpuclk_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1743.633 ; gain = 413.488 ; free physical = 464 ; free virtual = 13531
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1742.887 ; gain = 386.477 ; free physical = 10095 ; free virtual = 14251
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1743.633 ; gain = 413.488 ; free physical = 464 ; free virtual = 13532
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1742.887 ; gain = 386.477 ; free physical = 10095 ; free virtual = 14252
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -165,7 +165,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1743.633 ; gain = 413.488 ; free physical = 464 ; free virtual = 13533
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1742.887 ; gain = 386.477 ; free physical = 10094 ; free virtual = 14253
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -177,13 +177,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1744.617 ; gain = 414.473 ; free physical = 337 ; free virtual = 13413
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1743.871 ; gain = 387.461 ; free physical = 9982 ; free virtual = 14141
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1744.617 ; gain = 414.473 ; free physical = 337 ; free virtual = 13413
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1743.871 ; gain = 387.461 ; free physical = 9982 ; free virtual = 14141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -195,7 +195,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1753.633 ; gain = 423.488 ; free physical = 328 ; free virtual = 13404
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1753.887 ; gain = 397.477 ; free physical = 9974 ; free virtual = 14132
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -219,7 +219,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1753.633 ; gain = 423.488 ; free physical = 328 ; free virtual = 13404
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1753.887 ; gain = 397.477 ; free physical = 9974 ; free virtual = 14132
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -232,7 +232,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1753.633 ; gain = 423.488 ; free physical = 328 ; free virtual = 13404
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1753.887 ; gain = 397.477 ; free physical = 9974 ; free virtual = 14132
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -244,25 +244,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1753.633 ; gain = 423.488 ; free physical = 328 ; free virtual = 13404
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1753.887 ; gain = 397.477 ; free physical = 9974 ; free virtual = 14132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1753.633 ; gain = 423.488 ; free physical = 328 ; free virtual = 13404
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1753.887 ; gain = 397.477 ; free physical = 9974 ; free virtual = 14132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1753.633 ; gain = 423.488 ; free physical = 328 ; free virtual = 13404
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1753.887 ; gain = 397.477 ; free physical = 9974 ; free virtual = 14132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1753.633 ; gain = 423.488 ; free physical = 328 ; free virtual = 13404
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1753.887 ; gain = 397.477 ; free physical = 9974 ; free virtual = 14132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -291,32 +291,32 @@ Report Instance Areas:
 |2     |  inst   |cpuclk_clk_wiz |     4|
 +------+---------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1753.633 ; gain = 423.488 ; free physical = 328 ; free virtual = 13404
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1753.887 ; gain = 397.477 ; free physical = 9974 ; free virtual = 14132
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1753.633 ; gain = 142.621 ; free physical = 391 ; free virtual = 13467
-Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1753.641 ; gain = 423.488 ; free physical = 391 ; free virtual = 13467
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1753.887 ; gain = 117.617 ; free physical = 10037 ; free virtual = 14195
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1753.895 ; gain = 397.477 ; free physical = 10037 ; free virtual = 14195
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1761.633 ; gain = 0.000 ; free physical = 323 ; free virtual = 13399
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1761.887 ; gain = 0.000 ; free physical = 9969 ; free virtual = 14128
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 25 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1761.633 ; gain = 431.617 ; free physical = 364 ; free virtual = 13440
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1761.633 ; gain = 0.000 ; free physical = 364 ; free virtual = 13440
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1761.887 ; gain = 405.609 ; free physical = 10009 ; free virtual = 14168
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1761.887 ; gain = 0.000 ; free physical = 10009 ; free virtual = 14168
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/cpuclk_synth_1/cpuclk.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP cpuclk, cache-ID = c899a1716e084d58
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1765.633 ; gain = 0.000 ; free physical = 344 ; free virtual = 13420
+INFO: [Common 17-1381] The checkpoint '/home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.runs/cpuclk_synth_1/cpuclk.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP cpuclk, cache-ID = d0c977cecfd793d3
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1765.887 ; gain = 0.000 ; free physical = 10002 ; free virtual = 14161
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/wufisher/hub/cs_riscv_exp/cu/mycpu/mycpu.runs/cpuclk_synth_1/cpuclk.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/wufisher/hub/cs_riscv_exp/scu/mycpu/mycpu.runs/cpuclk_synth_1/cpuclk.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file cpuclk_utilization_synth.rpt -pb cpuclk_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jun 24 10:52:03 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Jul 11 15:20:53 2022...

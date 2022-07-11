@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Fri Jul  1 14:40:37 2022
+| Date             : Mon Jul 11 15:28:33 2022
 | Host             : wufisher-TK running 64-bit Ubuntu 20.04.4 LTS
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.187        |
+| Total On-Chip Power (W)  | 0.194        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.103        |
+| Dynamic (W)              | 0.110        |
 | Device Static (W)        | 0.084        |
 | Effective TJA (C/W)      | 2.7          |
 | Max Ambient (C)          | 84.5         |
@@ -52,19 +52,19 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.004 |        5 |       --- |             --- |
-| Slice Logic              |    <0.001 |    16732 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |     1568 |     63400 |            2.47 |
-|   Register               |    <0.001 |      155 |    126800 |            0.12 |
+| Clocks                   |     0.009 |        5 |       --- |             --- |
+| Slice Logic              |    <0.001 |    16939 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     1480 |     63400 |            2.33 |
+|   Register               |    <0.001 |      471 |    126800 |            0.37 |
 |   CARRY4                 |    <0.001 |       33 |     15850 |            0.21 |
 |   LUT as Distributed RAM |    <0.001 |     8240 |     19000 |           43.37 |
 |   F7/F8 Muxes            |    <0.001 |     6532 |     63400 |           10.30 |
-|   Others                 |     0.000 |       12 |       --- |             --- |
-| Signals                  |    <0.001 |     3586 |       --- |             --- |
-| PLL                      |     0.098 |        1 |         6 |           16.67 |
+|   Others                 |     0.000 |       17 |       --- |             --- |
+| Signals                  |    <0.001 |     3666 |       --- |             --- |
+| PLL                      |     0.099 |        1 |         6 |           16.67 |
 | I/O                      |    <0.001 |       66 |       285 |           23.16 |
 | Static Power             |     0.084 |          |           |                 |
-| Total                    |     0.187 |          |           |                 |
+| Total                    |     0.194 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,8 +74,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.029 |       0.014 |      0.015 |
-| Vccaux    |       1.800 |     0.067 |       0.049 |      0.018 |
+| Vccint    |       1.000 |     0.034 |       0.019 |      0.015 |
+| Vccaux    |       1.800 |     0.068 |       0.050 |      0.018 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
@@ -131,8 +131,8 @@ Table of Contents
 | Clock           | Domain                    | Constraint (ns) |
 +-----------------+---------------------------+-----------------+
 | clk_i           | clk_i                     |            10.0 |
-| clk_out1_cpuclk | UCLK/inst/clk_out1_cpuclk |            40.0 |
-| clkfbout_cpuclk | UCLK/inst/clkfbout_cpuclk |            40.0 |
+| clk_out1_cpuclk | UCLK/inst/clk_out1_cpuclk |            20.0 |
+| clkfbout_cpuclk | UCLK/inst/clkfbout_cpuclk |            20.0 |
 +-----------------+---------------------------+-----------------+
 
 
@@ -145,12 +145,13 @@ Table of Contents
 +-----------------------------------+-----------+
 | Name                              | Power (W) |
 +-----------------------------------+-----------+
-| top                               |     0.103 |
-|   UCLK                            |     0.098 |
-|     inst                          |     0.098 |
-|   u_dram                          |     0.004 |
-|     U0                            |     0.004 |
-|       synth_options.dist_mem_inst |     0.004 |
+| top                               |     0.110 |
+|   UCLK                            |     0.100 |
+|     inst                          |     0.100 |
+|   u_dram                          |     0.008 |
+|     U0                            |     0.008 |
+|       synth_options.dist_mem_inst |     0.008 |
+|   u_rv_u                          |     0.001 |
 +-----------------------------------+-----------+
 
 

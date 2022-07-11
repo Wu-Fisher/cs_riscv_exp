@@ -21,7 +21,7 @@ wire[31:0] wr_npc_pc;
 
 wire[31:0] wr_pc_pp1_pc;
 wire[31:0] wr_pc_pp1_pcadd;
-
+assign wr_pc_npc_add = wr_pc_pp1_pcadd;
 // pp1
 
 wire[31:0] wr_pp1_pp2_pc;
@@ -92,9 +92,8 @@ wire[4:0] wr_pp3_pp4_raddr;
 wire[1:0] wr_pp3_pp4_wbsel;
 wire wr_pp3_pp4_regwen;
 wire[31:0] wr_pp3_dmm_data;
-wire[31:0] wr_pp3_dmm_addr;
 wire wr_pp3_dmm_wen;
-assign memaddr_o = wr_pp3_dmm_addr;
+assign memaddr_o = wr_pp3_pp4_alu;
 assign memdata_o = wr_pp3_dmm_data;
 assign memwb_o = wr_pp3_dmm_wen;
 
@@ -240,10 +239,10 @@ pipline_exe_wb u_pp3 (
     .regwen_o        (wr_pp3_pp4_regwen),
     .wbsel_o         (wr_pp3_pp4_wbsel),
     .memrw_o         (wr_pp3_dmm_wen),
-    .raddr_o         (wr_pp3_dmm_addr)
+    .raddr_o         (wr_pp3_pp4_raddr)
 );
 
-pipline_wb u_pipline_wb (
+pipline_wb u_pp4 (
     .clk                   (clk),
     .rst_n                 (rst_n),
     .pc_add_i              (wr_pp3_pp4_pcadd),
